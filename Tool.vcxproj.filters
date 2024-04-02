@@ -1,0 +1,1293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>1c6fa5c3-8803-4b62-8f04-90fd2fc63a12</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>01e06fa9-b055-4cdf-a5e4-a1b9c88acf13</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dds;dlg;fbx;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{9f542f87-e848-4b6e-8865-5fc29589987b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib">
+      <UniqueIdentifier>{6cbca2f7-d2d3-4a71-bf30-b7695f647051}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas">
+      <UniqueIdentifier>{7de2ea16-bee3-4d15-8d7c-dc17007da56e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes">
+      <UniqueIdentifier>{887d8fd8-70db-4b46-8dc0-4972b361782d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene">
+      <UniqueIdentifier>{7ba16bfe-223b-4267-9b0d-238e62ff629c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\TitleScene">
+      <UniqueIdentifier>{c4e35866-5e4c-4f1b-a51a-558d0730bf3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\ResultScene">
+      <UniqueIdentifier>{81e8a8a1-6282-4932-82f6-968a791ba523}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\UI">
+      <UniqueIdentifier>{c79223e4-6af0-45e4-8daa-fc18ed0bf93e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object">
+      <UniqueIdentifier>{d9c7b518-7e31-43aa-99eb-b563aadbde5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FBX">
+      <UniqueIdentifier>{aac8de5c-88a3-4040-8d43-308122c943da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Bullet">
+      <UniqueIdentifier>{471f9e52-22d9-4555-a9b4-0084cbe828d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Enemy">
+      <UniqueIdentifier>{5dddbe77-a9e9-4527-aed8-f004b24a2be0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\SkyDoem">
+      <UniqueIdentifier>{9159e496-5aef-4c77-add8-2158a72576ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player">
+      <UniqueIdentifier>{61095d60-2ee6-43e1-b19a-60f8c3c370ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Wall">
+      <UniqueIdentifier>{4414bc96-ed70-4ffa-a992-bab63ee12144}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Wall\interface">
+      <UniqueIdentifier>{db0f741b-dc7d-4489-a71a-16013e52ff19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\interface">
+      <UniqueIdentifier>{9a55df57-49f7-46e8-af16-6084dfef1296}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\interface">
+      <UniqueIdentifier>{176ca98a-723e-48fc-a427-7dc57c8209d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Colision">
+      <UniqueIdentifier>{9cc9ec9c-d949-4162-b014-c048084cc7a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Effect">
+      <UniqueIdentifier>{570fded3-c654-4fb7-a7fa-d7bee950f6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Singleton">
+      <UniqueIdentifier>{39dec64b-66db-46a7-9698-6b372b5a76f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Singleton\Timer">
+      <UniqueIdentifier>{ca37be91-dbf8-4c52-96ca-5968e5fed1c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Singleton\Input">
+      <UniqueIdentifier>{496e9643-c45d-4f88-8489-3b4e019c57e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Singleton\AudioManager">
+      <UniqueIdentifier>{d65fc908-a47f-404d-bf72-c97640e7ed49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Singleton\ResourcesData">
+      <UniqueIdentifier>{59226e8a-fab9-4319-8943-295aca6d236a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Singleton\ScreenResources">
+      <UniqueIdentifier>{d84744cb-c174-422e-bad3-7e3c71c46bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sharders">
+      <UniqueIdentifier>{c5604778-b830-4eab-a428-6dae5c43729a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Singleton\PlayInfo">
+      <UniqueIdentifier>{f8dae9ba-61fd-4b29-b78e-3a542f6279e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Number">
+      <UniqueIdentifier>{064b1b2c-86bf-4a8f-8383-6ae94acbfdf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene">
+      <UniqueIdentifier>{8ffc8a21-b8d4-4bc6-a57e-6e97a8f2d729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect">
+      <UniqueIdentifier>{117b92b8-fb42-4b39-8133-bda16469527d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Cloak">
+      <UniqueIdentifier>{ec332847-0be6-4115-a800-d98252ada6c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\Door2D">
+      <UniqueIdentifier>{a6733330-4483-4007-a121-6f1ea6dd5221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\Enemy2D">
+      <UniqueIdentifier>{935c08f0-7373-437a-9220-106ec03190fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\KeyFont">
+      <UniqueIdentifier>{28750a13-db83-4324-8fbe-3ac054492ccf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\StarManager">
+      <UniqueIdentifier>{88a5541d-5a58-4df8-9919-a9a8d49f1fb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\StarManager\Star">
+      <UniqueIdentifier>{e6720435-532c-419d-96b7-dd1b6072dc56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\StageCircle">
+      <UniqueIdentifier>{e7eebb83-32ae-40e2-8032-44c703966d03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\Player2D">
+      <UniqueIdentifier>{e698a8a6-a583-40e1-800c-eb2d5c90a717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\UI\PlayerHPBar">
+      <UniqueIdentifier>{74d57e0f-fc9a-4709-b2e9-342ca1d6e8da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\UI\PlayerUI">
+      <UniqueIdentifier>{16ebff9c-38c8-46f2-b32f-e3ae181e2c36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\UI\StartSignal">
+      <UniqueIdentifier>{7fcc37f1-bbb5-4ea2-9545-21aa9689c704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\ColisionObjects">
+      <UniqueIdentifier>{95572653-a0b1-48e0-ab65-45337f10f1d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\TitleScene\Title">
+      <UniqueIdentifier>{c8adc969-a264-49cf-9b7b-cd69c2602767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\TitleScene\Title\TitleUI">
+      <UniqueIdentifier>{6a333cda-bd6b-466c-92a7-4d83c96c6d8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\TitleScene\Title\Gear">
+      <UniqueIdentifier>{77ecc277-266f-4f0e-8546-cf9c86b63bb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\TitleScene\Title\TitleLogo">
+      <UniqueIdentifier>{838b69e7-346b-48b7-a86f-a6c6d3a45f69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\TitleScene\Title\TitleStringUI">
+      <UniqueIdentifier>{73ff7366-66a5-419d-80d9-c941b75d0442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\ResultScene\Result">
+      <UniqueIdentifier>{f246c677-ab12-4823-9f66-e5b2b0c5bc6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\ResultScene\Result\ScoreOutPut">
+      <UniqueIdentifier>{7122ab50-68b1-4d9e-bb6d-f32366d79a87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\StageBackGround">
+      <UniqueIdentifier>{de6a5742-a9f1-403f-87ed-78e1275d5246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\PlayerArrow">
+      <UniqueIdentifier>{64ae2dfb-55c2-4a7a-b5e7-d9658cf5a08e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\BossEnemy">
+      <UniqueIdentifier>{dcb92f9c-cd9d-48a5-8318-4d46cef8a28a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\NormalEnemy">
+      <UniqueIdentifier>{85e4ed09-9dae-4f71-97aa-448e9ec9c9a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\Enemy">
+      <UniqueIdentifier>{b209b3ed-353a-47b5-86a7-017e5c80fd50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyFactory">
+      <UniqueIdentifier>{e52103f1-a5cb-4748-9f48-366dff94929d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyManager">
+      <UniqueIdentifier>{270557a2-0454-4d4c-8731-42dbd42116f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\Bullet">
+      <UniqueIdentifier>{f58b4a32-a2f3-465d-996e-4f13154fd54a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletFactroy">
+      <UniqueIdentifier>{b4dcecf5-9ae1-46c9-baea-ed35547309ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletManager">
+      <UniqueIdentifier>{5e68cd76-c3d6-4009-8069-2feaa061176d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Config">
+      <UniqueIdentifier>{35fcb9ab-953a-4740-bd74-d2574fbc8f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Camera">
+      <UniqueIdentifier>{f22c8457-88a3-4aec-93e7-b8eebe0dda36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\BinaryFile">
+      <UniqueIdentifier>{a2877eb3-55bf-49f2-95dd-c6594f8cd3b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Pause">
+      <UniqueIdentifier>{f4e9e6d4-203e-4012-bcd8-cbd91448cf16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\ResultScene\Result\Valuation">
+      <UniqueIdentifier>{d3e6e4cb-b8d0-4cc8-bd4c-3a9e0a2a501f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\ResultScene\Result\OutPutUI">
+      <UniqueIdentifier>{4eaac62d-ba0a-4ea3-8dd3-ecbe1656127f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\ResultScene\Result\ResultBackGround">
+      <UniqueIdentifier>{4c9d51d0-e8d9-4c47-b01c-6db4f9047dcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\ResultScene\Result\PushSeal">
+      <UniqueIdentifier>{98a24d2d-69bf-4480-86bf-65e3d7cf1d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\UI\PlayeScore">
+      <UniqueIdentifier>{a8b91173-47b6-4e7d-a36e-8bf1fc12fc36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\Bird">
+      <UniqueIdentifier>{0b8b3806-8c8f-417b-8fd9-33fd0c099c29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\UI\MiniMap">
+      <UniqueIdentifier>{2acba9c4-ccb5-442c-a802-43bb2677780d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Cursor">
+      <UniqueIdentifier>{e8c44222-e597-4e5a-b586-aaa5d9a5cf90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\interface">
+      <UniqueIdentifier>{76ae55c2-1e3f-4fc7-888f-eb1c7fa38bd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item">
+      <UniqueIdentifier>{3fc35f79-46f4-4367-adad-e43be30128ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\Item">
+      <UniqueIdentifier>{553b2b3d-b2b3-4611-8c9c-3b0bb441831a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\RecoveryItem">
+      <UniqueIdentifier>{5afd746b-90bc-4f84-a6ae-49fcb063f466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemFactory">
+      <UniqueIdentifier>{9c8b0588-a412-4ae3-bf34-cc11687c12e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemFactory\interface">
+      <UniqueIdentifier>{f0d4f7c6-0513-49cb-8734-e5f45d116b7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemManager">
+      <UniqueIdentifier>{c25f5374-d9eb-4605-ac38-04b1e683e2f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\Cursor">
+      <UniqueIdentifier>{7d0a645c-8231-498c-9bd9-33d0fcbe13c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorBottom">
+      <UniqueIdentifier>{fb22f8c7-4dfe-468e-8a97-001a4a1140d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorTop">
+      <UniqueIdentifier>{473905c3-15f0-4696-aad1-3aba51fe40b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorFactory">
+      <UniqueIdentifier>{2791ac7a-9ec5-4481-aff7-35fda1c9e189}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\StageSelectScene\StageSelect\Sun">
+      <UniqueIdentifier>{5f2dc24a-470c-4227-a65f-1bd011c40588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ReflectItem">
+      <UniqueIdentifier>{1fe406ab-a154-495a-83bb-bed668a2bf97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\PowerUPItem">
+      <UniqueIdentifier>{e8371a25-a0dd-4959-a314-c65f4d1d7c8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Object">
+      <UniqueIdentifier>{0e682d46-f162-4499-a2d4-c833e63258c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Effect\BulletHitParticle">
+      <UniqueIdentifier>{9aeea0d5-2166-4388-b4ae-610eb3b5ce54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Effect\HitParticle">
+      <UniqueIdentifier>{0cf39df6-fb93-459b-9367-bdeaa1dee1e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Effect\HitRenderer">
+      <UniqueIdentifier>{814ccaa1-f363-499e-ac5c-caf76a6085b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\UI\PlayerExperiencePointUI">
+      <UniqueIdentifier>{d15cedaa-c5f4-42f1-b39b-802ba96b95fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\UI\LevelCard">
+      <UniqueIdentifier>{45bf2e67-445f-40a1-9a1a-6aa0a37d3c0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts">
+      <UniqueIdentifier>{e3aa7bac-08e5-4aba-abe0-49f7cb9f99ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\PlayerExperiencePoint">
+      <UniqueIdentifier>{0b4c300c-2bf8-40dd-814e-3b52f608c74f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\interface">
+      <UniqueIdentifier>{e5a520e6-e042-4944-b71b-a58edc4dc96f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerBody">
+      <UniqueIdentifier>{53ef05b0-a353-4fce-bd2a-7d332998dc21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerHead">
+      <UniqueIdentifier>{ff63d7a6-c634-4c90-af6f-4c6e1ff1e1f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerLeftLeg">
+      <UniqueIdentifier>{f9548935-db20-40f1-a3b1-29b7fb808d77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerRightLeg">
+      <UniqueIdentifier>{efa3589b-cad1-44ce-8833-ba4358b842c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerRightArm">
+      <UniqueIdentifier>{81ce179c-a7ff-49e9-a97d-ee32c6d28f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerLeftArm">
+      <UniqueIdentifier>{fbff12ad-d1a3-43a8-b3e4-23f35b22c27b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\factory">
+      <UniqueIdentifier>{9aadbd10-9d94-4b3c-94fe-828618a48e5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Camera\Camera">
+      <UniqueIdentifier>{46107ef5-6a2e-442c-8214-93046ce41007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Camera\FadeCamera">
+      <UniqueIdentifier>{4eb534a2-7bd7-4637-b852-203b718c4015}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Camera\IdleCamera">
+      <UniqueIdentifier>{4ac1518d-d9ca-4dff-8226-21a9edfef574}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Camera\ShakeCamera">
+      <UniqueIdentifier>{1d33c156-e7c5-4390-abe2-41ce1e9fb48c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Camera\DeathCamera">
+      <UniqueIdentifier>{316ea2e5-831f-457a-8052-769df02d34c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayPostEffect">
+      <UniqueIdentifier>{1cedd13e-d534-49f3-bac5-cfb407ecf9d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule">
+      <UniqueIdentifier>{4a15206c-37b3-48d5-a65a-e3bccd15224e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\ItemCapsule">
+      <UniqueIdentifier>{b753a548-c64b-46e1-b615-2a488b615fc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\ItemCapsuleBottom">
+      <UniqueIdentifier>{b6a37147-b565-4ebf-b0ec-d571cde9154d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\ItemCapsuleTop">
+      <UniqueIdentifier>{9ec84d0f-59f8-454c-9228-d09da4fda52f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\interface">
+      <UniqueIdentifier>{7651cd94-c0a8-4fe6-949d-4243b1f49243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\Factory">
+      <UniqueIdentifier>{25a00ad1-01f2-473e-bbaf-608007c62316}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayPostEffect\PlayerCureEffect">
+      <UniqueIdentifier>{1ab0743b-1d18-4235-846c-6711090ca3ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayPostEffect\PlayerHPCrisisEffect">
+      <UniqueIdentifier>{7ceaf4e8-ec3f-496e-9d05-8dbbf482ab48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayPostEffect\PlayerPowerffect">
+      <UniqueIdentifier>{e882b60e-e739-4e15-b121-1f252b7a52a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayPostEffect\PlayerSpeedEffect">
+      <UniqueIdentifier>{38ac063a-b203-4565-af86-2ab87b75e78a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayPostEffect\PlayPostEffect">
+      <UniqueIdentifier>{77817aef-1a13-4479-ae71-667f8161d0a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayPostEffect\PostEffect">
+      <UniqueIdentifier>{090500e4-b162-4425-bbc8-98ed1e76d6a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\ChageSceneEffect">
+      <UniqueIdentifier>{ca4fccbf-1e6c-49df-ad8d-1d04aef790cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\ChageSceneEffect\ChageSceneEffect">
+      <UniqueIdentifier>{663e0453-640a-44b4-b08b-796f3c557cb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffect">
+      <UniqueIdentifier>{a159d071-28a5-4181-85a6-672e3a46635c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectPlay">
+      <UniqueIdentifier>{02576b65-24d5-4fc1-af46-d35c75d0e84a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectStageSelect">
+      <UniqueIdentifier>{7d366f2c-0dd2-4eb5-810b-21198f976ba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectTitle">
+      <UniqueIdentifier>{45508a51-4f7c-4300-820b-6b8f718ebf35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectResult">
+      <UniqueIdentifier>{24b7c99c-4047-405a-8ad4-d72034a4d372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Wave">
+      <UniqueIdentifier>{6d6e2dae-657c-4d60-9443-041472f498f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyLeg">
+      <UniqueIdentifier>{c58feec1-2e5c-475f-a6e1-6a9e7ac74a88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Wepons">
+      <UniqueIdentifier>{14b7c36e-2e8c-4357-9d61-1183b523c8a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Camera\WinCamera">
+      <UniqueIdentifier>{defc5a2d-489a-4d17-a7fe-c3add0eb9fe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayerStatus">
+      <UniqueIdentifier>{1fd7df42-bccc-4a28-8548-574e153f1e00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayerMove">
+      <UniqueIdentifier>{9c7e0372-7efd-4321-b8b6-1b35d66701a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\TackleEnemy">
+      <UniqueIdentifier>{10c03e14-036b-40f2-80ce-55e0f9bcd9ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\Object\FallingCherryBlossoms">
+      <UniqueIdentifier>{64559742-e8ae-4a81-aa3c-9fe5f98f1381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\MyLib\GameDatas\Effect\EnemyHeart">
+      <UniqueIdentifier>{2cac4f58-165d-4323-bbba-b17ae954222d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\PlayScene.h">
+      <Filter>Game\MyLib\Scenes\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\ResultScene.h">
+      <Filter>Game\MyLib\Scenes\ResultScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\IScene.h">
+      <Filter>Game\MyLib\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\SceneManager.h">
+      <Filter>Game\MyLib\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Floor_Model.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\SkyDoem\SkyDome.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\SkyDoem</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\ICursorComponent.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\ICursorFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Player.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wall\Wall.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wall</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wall\WallFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wall</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wall\IWallFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wall\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\IBulletFactroy.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Bullet\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\IEnemyFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\Utility.h">
+      <Filter>Game\MyLib\GameDatas</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\Collision.h">
+      <Filter>Game\MyLib\GameDatas\Colision</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ElapsedTime.h">
+      <Filter>Game\MyLib\GameDatas\Singleton\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\InputSystem.h">
+      <Filter>Game\MyLib\GameDatas\Singleton\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\StageSelectScene.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\AudioManager.h">
+      <Filter>Game\MyLib\GameDatas\Singleton\AudioManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\Pause.h">
+      <Filter>Game\MyLib\GameDatas\Pause</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ScreenResources.h">
+      <Filter>Game\MyLib\GameDatas\Singleton\ScreenResources</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\Config.h">
+      <Filter>Game\MyLib\GameDatas\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\IUI.h">
+      <Filter>Game\MyLib\GameDatas</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ResourcesData.h">
+      <Filter>Game\MyLib\GameDatas\Singleton\ResourcesData</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\BinaryFile.h">
+      <Filter>Game\MyLib\GameDatas\BinaryFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayInfo.h">
+      <Filter>Game\MyLib\GameDatas\Singleton\PlayInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\Number.h">
+      <Filter>Game\MyLib\GameDatas\Number</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cloak\Cloak.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cloak</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Door2D.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Door2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Enemy2D.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Enemy2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\KeyFont.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\KeyFont</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\StageBackGround.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\StageBackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ReadData.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\StarManager.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\StarManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Star.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\StarManager\Star</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\StageCircle.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\StageCircle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Player2D.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Player2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\PlayerHPBar.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\PlayerHPBar</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\PlayerUI.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\PlayerUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\StartSignal.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\StartSignal</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayerCircle\PlayerArrow.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\PlayerArrow</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ColisionObjects.h">
+      <Filter>Game\MyLib\GameDatas\ColisionObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\TitleUI.h">
+      <Filter>Game\MyLib\Scenes\TitleScene\Title\TitleUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\TitleLogo.h">
+      <Filter>Game\MyLib\Scenes\TitleScene\Title\TitleLogo</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\Gear.h">
+      <Filter>Game\MyLib\Scenes\TitleScene\Title\Gear</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\TitleStringUI.h">
+      <Filter>Game\MyLib\Scenes\TitleScene\Title\TitleStringUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\ScoreOutPut.h">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\ScoreOutPut</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\BossEnemy.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\BossEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\NormalEnemy.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\NormalEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\TackleEnemy.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\TackleEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\Enemy.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyManager.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\Bullet.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Bullet\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletFactroy.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletFactroy</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletManager.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\ValuationScore.h">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\Valuation</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\OutPutResultUI.h">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\OutPutUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\ResultBackGround.h">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\ResultBackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\PushSeal.h">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\PushSeal</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\PlayeScore.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\PlayeScore</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Bird.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Bird</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Sun.h">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Sun</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\MiniMap.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\MiniMap</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\Item.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\RecoveryItem.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\RecoveryItem</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\IItemFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemFactory\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemManager.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsule.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\ItemCapsule</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleBottom.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\ItemCapsuleBottom</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleTop.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\ItemCapsuleTop</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\Cursor.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorBottom.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorBottom</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorTop.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorTop</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\IItemCapsuleComponent.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\IItemCapsuleFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\ReflectItem.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ReflectItem</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\PowerUPItem.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\PowerUPItem</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Object.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\IEnemyColisionSphere.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\BulletHitParticle.h">
+      <Filter>Game\MyLib\GameDatas\Effect\BulletHitParticle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\HitParticle.h">
+      <Filter>Game\MyLib\GameDatas\Effect\HitParticle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\HitRenderer.h">
+      <Filter>Game\MyLib\GameDatas\Effect\HitRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\PlayerExperiencePointUI.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\PlayerExperiencePointUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCard.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\LevelCard</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardEffect.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\LevelCard</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardBackGround.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\LevelCard</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\FiniteStateMachine.h">
+      <Filter>Game\MyLib\GameDatas</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayerExperiencePoint\PlayerExperiencePoint.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\PlayerExperiencePoint</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerComponent.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\IPlayerPartsFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\IPlayerComponent.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerBody.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerBody</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerHead.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerHead</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerLeftLeg.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerLeftLeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerRightLeg.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerRightLeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerRightArm.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerRightArm</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerLeftArm.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerLeftArm</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerPartsFactory.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Camera\Camera.h">
+      <Filter>Game\MyLib\GameDatas\Camera\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Camera\FadeCamera.h">
+      <Filter>Game\MyLib\GameDatas\Camera\FadeCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Camera\ShakeCamera.h">
+      <Filter>Game\MyLib\GameDatas\Camera\ShakeCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Camera\DeathCamera.h">
+      <Filter>Game\MyLib\GameDatas\Camera\DeathCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\EnemyHeart.h">
+      <Filter>Game\MyLib\GameDatas\Effect\EnemyHeart</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerCureEffect.h">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerCureEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerHPCrisisEffect.h">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerHPCrisisEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerPowerffect.h">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerPowerffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerSpeedEffect.h">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerSpeedEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayPostEffect.h">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayPostEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PostEffect.h">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PostEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ChageSceneEffect.h">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChageSceneEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffect.h">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffectPlay.h">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectPlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffectStageSelect.h">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectStageSelect</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffectTitle.h">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectTitle</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Camera\IdleCamera.h">
+      <Filter>Game\MyLib\GameDatas\Camera\IdleCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffectResult.h">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectResult</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\json.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Wave\ButtleWave.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Wave\PlaySceneWave.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\EnemyData.h">
+      <Filter>Game\MyLib\GameDatas</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyLeg.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyLeg</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\TitleScene.h">
+      <Filter>Game\MyLib\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Bat.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Camera\WinCamera.h">
+      <Filter>Game\MyLib\GameDatas\Camera\WinCamera</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerStatus.h">
+      <Filter>Game\MyLib\GameDatas\PlayerStatus</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerMove.h">
+      <Filter>Game\MyLib\GameDatas\PlayerMove</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\SteeringBehavior.h">
+      <Filter>Game\MyLib\GameDatas</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\FallingCherryBlossoms\FallingCherryBlossoms.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\FallingCherryBlossoms</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\PlayScene.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\ResultScene.cpp">
+      <Filter>Game\MyLib\Scenes\ResultScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\TitleSccene.cpp">
+      <Filter>Game\MyLib\Scenes\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Floor_Model.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\SkyDoem\SkyDome.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\SkyDoem</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Player.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wall\Wall.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wall</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wall\WallFactory.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wall</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\Collision.cpp">
+      <Filter>Game\MyLib\GameDatas\Colision</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\InputSystem.cpp">
+      <Filter>Game\MyLib\GameDatas\Singleton\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\ElapsedTime.cpp">
+      <Filter>Game\MyLib\GameDatas\Singleton\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\StageSelectScene.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\AudioManager.cpp">
+      <Filter>Game\MyLib\GameDatas\Singleton\AudioManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\Pause.cpp">
+      <Filter>Game\MyLib\GameDatas\Pause</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\ResourcesData.cpp">
+      <Filter>Game\MyLib\GameDatas\Singleton\ResourcesData</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\ScreenResources.cpp">
+      <Filter>Game\MyLib\GameDatas\Singleton\ScreenResources</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\Config.cpp">
+      <Filter>Game\MyLib\GameDatas\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\BinaryFile.cpp">
+      <Filter>Game\MyLib\GameDatas\BinaryFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\PlayInfo.cpp">
+      <Filter>Game\MyLib\GameDatas\Singleton\PlayInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\Number.cpp">
+      <Filter>Game\MyLib\GameDatas\Number</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cloak\Cloak.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cloak</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Door2D.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Door2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Enemy2D.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Enemy2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\KeyFont.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\KeyFont</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\StageBackGround.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\StageBackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\StarManager.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\StarManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Star.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\StarManager\Star</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\StageCircle.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\StageCircle</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Player2D.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Player2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\PlayerHPBar.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\PlayerHPBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\PlayerUI.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\PlayerUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\StartSignal.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\StartSignal</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayerCircle\PlayerArrow.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\PlayerArrow</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\ColisionObjects.cpp">
+      <Filter>Game\MyLib\GameDatas\ColisionObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\TitleUI.cpp">
+      <Filter>Game\MyLib\Scenes\TitleScene\Title\TitleUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\TitleLogo.cpp">
+      <Filter>Game\MyLib\Scenes\TitleScene\Title\TitleLogo</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\Gear.cpp">
+      <Filter>Game\MyLib\Scenes\TitleScene\Title\Gear</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\TitleStringUI.cpp">
+      <Filter>Game\MyLib\Scenes\TitleScene\Title\TitleStringUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\ScoreOutPut.cpp">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\ScoreOutPut</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\BossEnemy.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\BossEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\NormalEnemy.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\NormalEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\TackleEnemy.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\TackleEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\Enemy.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyFactory.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyManager.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\Bullet.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Bullet\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletFactroy.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletFactroy</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletManager.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\ValuationScore.cpp">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\Valuation</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\OutPutResultUI.cpp">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\OutPutUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\ResultBackGround.cpp">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\ResultBackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\PushSeal.cpp">
+      <Filter>Game\MyLib\Scenes\ResultScene\Result\PushSeal</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\PlayeScore.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\PlayeScore</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Bird.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Bird</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Sun.cpp">
+      <Filter>Game\MyLib\Scenes\StageSelectScene\StageSelect\Sun</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\MiniMap.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\MiniMap</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\Item.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\RecoveryItem.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\RecoveryItem</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemFactory.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemManager.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsule.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\ItemCapsule</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleBottom.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\ItemCapsuleBottom</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleTop.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\ItemCapsuleTop</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\Cursor.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\Cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorBottom.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorBottom</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorTop.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorTop</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorFactory.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleFactory.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ItemCapsule\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\ReflectItem.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\ReflectItem</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\PowerUPItem.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Item\PowerUPItem</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Object.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\BulletHitParticle.cpp">
+      <Filter>Game\MyLib\GameDatas\Effect\BulletHitParticle</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\HitParticle.cpp">
+      <Filter>Game\MyLib\GameDatas\Effect\HitParticle</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\HitRenderer.cpp">
+      <Filter>Game\MyLib\GameDatas\Effect\HitRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\PlayerExperiencePointUI.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\PlayerExperiencePointUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCard.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\LevelCard</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardEffect.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\LevelCard</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardBackGround.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\LevelCard</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayerExperiencePoint\PlayerExperiencePoint.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\PlayerExperiencePoint</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerBody.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerBody</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerHead.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerHead</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerLeftLeg.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerLeftLeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerRightLeg.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerRightLeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerRightArm.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerRightArm</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerLeftArm.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\PlayerLeftArm</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerPartsFactory.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Player\PlayerParts\factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Camera\Camera.cpp">
+      <Filter>Game\MyLib\GameDatas\Camera\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Camera\FadeCamera.cpp">
+      <Filter>Game\MyLib\GameDatas\Camera\FadeCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Camera\IdleCamera.cpp">
+      <Filter>Game\MyLib\GameDatas\Camera\IdleCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Camera\ShakeCamera.cpp">
+      <Filter>Game\MyLib\GameDatas\Camera\ShakeCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Camera\DeathCamera.cpp">
+      <Filter>Game\MyLib\GameDatas\Camera\DeathCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\EnemyHeart.cpp">
+      <Filter>Game\MyLib\GameDatas\Effect\EnemyHeart</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerCureEffect.cpp">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerCureEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerHPCrisisEffect.cpp">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerHPCrisisEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerPowerffect.cpp">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerPowerffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerSpeedEffect.cpp">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerSpeedEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\PlayPostEffect.cpp">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayPostEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\ChageSceneEffect.cpp">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChageSceneEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\ChangeEffectPlay.cpp">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectPlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\ChangeEffectStageSelect.cpp">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectStageSelect</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\ChangeEffectTitle.cpp">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectTitle</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\ChangeEffectResult.cpp">
+      <Filter>Game\MyLib\GameDatas\ChageSceneEffect\ChangeEffectResult</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Wave\ButtleWave.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Wave\PlaySceneWave.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyLeg.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyLeg</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Bat.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Camera\WinCamera.cpp">
+      <Filter>Game\MyLib\GameDatas\Camera\WinCamera</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerStatus.cpp">
+      <Filter>Game\MyLib\GameDatas\PlayerStatus</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerMove.cpp">
+      <Filter>Game\MyLib\GameDatas\PlayerMove</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\FallingCherryBlossoms\FallingCherryBlossoms.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\Object\FallingCherryBlossoms</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="directx.ico">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="settings.manifest">
+      <Filter>Assets</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="Resources\Models\fbx\floor.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\cursorBottom.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\cursorTop.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\sord.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\bossEnemy.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\skydoam.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\wall.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\enemy_tackle.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\cloak.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\arrow.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\recovery.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\capsuleBottom.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\capsuleTop.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\bat.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\armPower.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerHead.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerLeftArm.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerLeftLeg.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerRightArm.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerRightLeg.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerBody.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\normalEnemy.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\normalEnemyLeg.fbx">
+      <Filter>FBX</Filter>
+    </MeshContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Sharders\Particle.hlsli">
+      <Filter>Sharders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Resources\Sharders\ParticleGS.hlsl">
+      <Filter>Sharders</Filter>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\ParticlePS.hlsl">
+      <Filter>Sharders</Filter>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\ParticleVS.hlsl">
+      <Filter>Sharders</Filter>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\NumberrPS.hlsl">
+      <Filter>Sharders</Filter>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\StageBackGroundPS.hlsl">
+      <Filter>Sharders</Filter>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\RedNumberPS..hlsl">
+      <Filter>Sharders</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

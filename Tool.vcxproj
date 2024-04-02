@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <RootNamespace>Tool</RootNamespace>
+    <ProjectGuid>{c190d9c7-b561-4889-b5c6-89b86e0a3ceb}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\MeshContentTask.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\DeviceResources.h" />
+    <ClInclude Include="Common\Floor_Model.h" />
+    <ClInclude Include="Common\json.hpp" />
+    <ClInclude Include="Common\ReadData.h" />
+    <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="Game\MyLib\Camera\Camera.h" />
+    <ClInclude Include="Game\MyLib\Camera\DeathCamera.h" />
+    <ClInclude Include="Game\MyLib\Camera\FadeCamera.h" />
+    <ClInclude Include="Game\MyLib\Camera\IdleCamera.h" />
+    <ClInclude Include="Game\MyLib\Camera\ShakeCamera.h" />
+    <ClInclude Include="Game\MyLib\Camera\WinCamera.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\AudioManager.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\BinaryFile.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\BulletHitParticle.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ChageSceneEffect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffectPlay.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffectResult.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffectStageSelect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ChangeEffectTitle.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ColisionObjects.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\Collision.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\Config.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ElapsedTime.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\EnemyData.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\FiniteStateMachine.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\HitParticle.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\HitRenderer.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\InputSystem.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\IUI.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\Number.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\Pause.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerCureEffect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerHPCrisisEffect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerMove.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerPowerffect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerSpeedEffect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerStatus.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayInfo.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayPostEffect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PostEffect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ResourcesData.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\ScreenResources.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\SteeringBehavior.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\EnemyHeart.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\Utility.h" />
+    <ClInclude Include="Game\MyLib\Scenes\IScene.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\Bullet.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletFactroy.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletManager.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\IBulletFactroy.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cloak\Cloak.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\Cursor.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorBottom.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorTop.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\ICursorFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\ICursorComponent.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\BossEnemy.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\Enemy.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyManager.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\IEnemyColisionSphere.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\IEnemyFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\NormalEnemy.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyLeg.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\TackleEnemy.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\FallingCherryBlossoms\FallingCherryBlossoms.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\IItemCapsuleComponent.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\IItemCapsuleFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsule.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleBottom.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleTop.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\IItemFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\Item.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemManager.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\PowerUPItem.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\RecoveryItem.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Item\ReflectItem.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Object.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\IPlayerComponent.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\IPlayerPartsFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerBody.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerComponent.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerHead.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerLeftArm.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerLeftLeg.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerPartsFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerRightArm.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerRightLeg.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Player.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayerCircle\PlayerArrow.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\PlayerExperiencePoint\PlayerExperiencePoint.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\SkyDoem\SkyDome.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wall\IWallFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wall\Wall.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wall\WallFactory.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Bat.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\PlayScene.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCard.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardBackGround.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardEffect.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\MiniMap.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\PlayerExperiencePointUI.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\PlayerHPBar.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\PlayerUI.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\PlayeScore.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\StartSignal.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Wave\ButtleWave.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Wave\PlaySceneWave.h" />
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\OutPutResultUI.h" />
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\PushSeal.h" />
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\ResultBackGround.h" />
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\ResultScene.h" />
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\ScoreOutPut.h" />
+    <ClInclude Include="Game\MyLib\Scenes\ResultScene\ValuationScore.h" />
+    <ClInclude Include="Game\MyLib\Scenes\SceneManager.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Bird.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Door2D.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Enemy2D.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\KeyFont.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Player2D.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\StageBackGround.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\StageCircle.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\StageSelectScene.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Star.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\StarManager.h" />
+    <ClInclude Include="Game\MyLib\Scenes\StageSelect\Sun.h" />
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\Gear.h" />
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\TitleLogo.h" />
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\TitleScene.h" />
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\TitleStringUI.h" />
+    <ClInclude Include="Game\MyLib\Scenes\TitleScene\TitleUI.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="StepTimer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\DeviceResources.cpp" />
+    <ClCompile Include="Common\Floor_Model.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="Game\MyLib\Camera\Camera.cpp" />
+    <ClCompile Include="Game\MyLib\Camera\DeathCamera.cpp" />
+    <ClCompile Include="Game\MyLib\Camera\FadeCamera.cpp" />
+    <ClCompile Include="Game\MyLib\Camera\IdleCamera.cpp" />
+    <ClCompile Include="Game\MyLib\Camera\ShakeCamera.cpp" />
+    <ClCompile Include="Game\MyLib\Camera\WinCamera.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\AudioManager.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\BinaryFile.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\BulletHitParticle.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ChageSceneEffect.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ChangeEffectPlay.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ChangeEffectResult.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ChangeEffectStageSelect.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ChangeEffectTitle.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ColisionObjects.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\Collision.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\Config.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ElapsedTime.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\HitParticle.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\HitRenderer.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\InputSystem.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\Number.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\Pause.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerCureEffect.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerHPCrisisEffect.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerMove.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerPowerffect.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerSpeedEffect.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerStatus.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\PlayInfo.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\PlayPostEffect.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ResourcesData.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ScreenResources.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\EnemyHeart.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\Bullet.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletFactroy.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Bullet\BulletManager.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cloak\Cloak.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorFactory.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\Cursor.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorBottom.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Cursor\CursorTop.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\BossEnemy.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\Enemy.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyFactory.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyManager.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\NormalEnemy.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyLeg.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\TackleEnemy.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\FallingCherryBlossoms\FallingCherryBlossoms.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsule.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleBottom.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleFactory.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\ItemCapsule\ItemCapsuleTop.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\Item.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemFactory.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\ItemManager.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\PowerUPItem.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\RecoveryItem.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Item\ReflectItem.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Object.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerBody.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerHead.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerLeftArm.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerLeftLeg.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerPartsFactory.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerRightArm.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayeComponent\PlayerRightLeg.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Player.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayerCircle\PlayerArrow.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\PlayerExperiencePoint\PlayerExperiencePoint.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\SkyDoem\SkyDome.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wall\Wall.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wall\WallFactory.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Bat.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\PlayScene.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCard.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardBackGround.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardEffect.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\MiniMap.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\PlayerExperiencePointUI.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\PlayerHPBar.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\PlayerUI.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\PlayeScore.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\StartSignal.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Wave\ButtleWave.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Wave\PlaySceneWave.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\OutPutResultUI.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\PushSeal.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\ResultBackGround.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\ResultScene.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\ScoreOutPut.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\ResultScene\ValuationScore.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Bird.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Door2D.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Enemy2D.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\KeyFont.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Player2D.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\StageBackGround.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\StageCircle.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\StageSelectScene.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Star.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\StarManager.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\StageSelect\Sun.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\Gear.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\TitleLogo.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\TitleSccene.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\TitleStringUI.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\TitleScene\TitleUI.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="directx.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="settings.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="Resources\Models\fbx\armPower.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\arrow.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\bat.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\bossEnemy.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\capsuleBottom.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\capsuleTop.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\cloak.fbx">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\cursorBottom.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\cursorTop.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\enemy_tackle.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\floor.fbx">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\normalEnemy.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\normalEnemyLeg.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerBody.fbx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerHead.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerLeftArm.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerLeftLeg.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerRightArm.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\playerRightLeg.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\recovery.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\skydoam.fbx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\sord.fbx">
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+    <MeshContentTask Include="Resources\Models\fbx\wall.fbx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ContentOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CMO\%(Filename).cmo</ContentOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </MeshContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Sharders\Particle.hlsli">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Resources\Sharders\NumberrPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\ParticleGS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Geometry</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Geometry</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\ParticlePS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\ParticleVS.hlsl">
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\RedNumberPS..hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+    <FxCompile Include="Resources\Sharders\StageBackGroundPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Resources\CSO\%(Filename).cso</ObjectFileOutput>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\MeshContentTask.targets" />
+    <Import Project="packages\Microsoft.XAudio2.Redist.1.2.11\build\native\Microsoft.XAudio2.Redist.targets" Condition="Exists('packages\Microsoft.XAudio2.Redist.1.2.11\build\native\Microsoft.XAudio2.Redist.targets')" />
+    <Import Project="packages\directxtk_desktop_2019.2023.9.6.1\build\native\directxtk_desktop_2019.targets" Condition="Exists('packages\directxtk_desktop_2019.2023.9.6.1\build\native\directxtk_desktop_2019.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.XAudio2.Redist.1.2.11\build\native\Microsoft.XAudio2.Redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.XAudio2.Redist.1.2.11\build\native\Microsoft.XAudio2.Redist.targets'))" />
+    <Error Condition="!Exists('packages\directxtk_desktop_2019.2023.9.6.1\build\native\directxtk_desktop_2019.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\directxtk_desktop_2019.2023.9.6.1\build\native\directxtk_desktop_2019.targets'))" />
+  </Target>
+</Project>
