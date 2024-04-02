@@ -1,5 +1,5 @@
 //	
-//		File Name ： ParamManager.h
+//		File Name ： ParamManager.cpp
 //		Production： 2023/4/02
 //		Author　　： 石田 恭一	
 // 
