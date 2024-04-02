@@ -213,6 +213,7 @@
     <ClInclude Include="Game\MyLib\GameDatas\ParamManager.h" />
     <ClInclude Include="Game\MyLib\GameDatas\Pause.h" />
     <ClInclude Include="Game\MyLib\GameDatas\PlayerCureEffect.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerData.h" />
     <ClInclude Include="Game\MyLib\GameDatas\PlayerHPCrisisEffect.h" />
     <ClInclude Include="Game\MyLib\GameDatas\PlayerMove.h" />
     <ClInclude Include="Game\MyLib\GameDatas\PlayerPowerffect.h" />
