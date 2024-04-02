@@ -57,7 +57,7 @@ void PlayerExperiencePoint::Update(const DX::StepTimer& timer)
 
 
 #ifdef _DEBUG
-	m_experiencePoint++;
+	m_experiencePoint++; 
 #endif // _DEBUG
 
 
