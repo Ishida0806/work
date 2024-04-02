@@ -1,3 +1,10 @@
+//	
+//		File Name ： ParamManager.h
+//		Production： 2023/4/02
+//		Author　　： 石田 恭一	
+// 
+//		パラメータマネージャー
+//	
 #include "pch.h"
 #include "ParamManager.h"
 
@@ -7,7 +14,7 @@ std::unique_ptr<MyLib::ParamManager> MyLib::ParamManager::m_paramManager = nullp
 /// ParamManagerの取得
 /// </summary>
 /// <returns>自身のポインター</returns>
-ParamManager* ParamManager::GetInstane()
+MyLib::ParamManager* MyLib::ParamManager::GetInstane()
 {
 	//	ヌルポなら生成
 	if (m_paramManager == nullptr)
