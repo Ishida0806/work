@@ -44,15 +44,15 @@ std::vector<EnemyData> ButtleWave::OpenMap()
 	// JSONデータの解析
 	std::wstring jsonFileName = L"Resources/Data/StageWave-" + std::to_wstring(m_playScene->GetWordLevel()) + L".json";
 	//	ファイルを開く
-	std::ifstream raceTrackFile(jsonFileName);
+	std::ifstream enemyDataFile(jsonFileName);
 	//	字列を JSON として解析
-	nlohmann::json raceTrackData = nlohmann::json::parse(raceTrackFile);
+	nlohmann::json enemyData = nlohmann::json::parse(enemyDataFile);
 	//	最大ウェーブ数
-	m_maxWave = raceTrackData["MaxWave"];
+	m_maxWave = enemyData["MaxWave"];
 	//	敵の出現データ
 	std::vector<EnemyData>	enemyDatas;
 	//	座標を取得する
-	for (const auto& data : raceTrackData["EnemyData"])
+	for (const auto& data : enemyData["EnemyData"])
 	{
 		//	座標
 		DirectX::SimpleMath::Vector3 position(data[0], data[1], data[2]);

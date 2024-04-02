@@ -10,31 +10,21 @@
 #include "PlayeComponent/PlayerPartsFactory.h"
 #include "../PlayScene.h"
 
-//	重力
-const float	Player::PLAYER_GRAVITY							     = 0.005f;
+
 //	衝突事のノックバック	
 const float Player::REACTION									 = 0.9f;
-//	死亡アニメーションの時間
-const float Player::DETAH_ANIMATION_TIME						 = 4.4f;
-//	勝利アニメーションの時間
-const float Player::WIN_ANIMATION_TIME							 = 5.2f;
 //	壁の場所	
 const float Player::WALL_PLACE									 = 23.5f;
-//	プレイヤーの振り向く速度
-const float Player::TURN_PLAYER_SPEED							 = 0.3f;
-//	プレイヤーの大きさ
-const DirectX::SimpleMath::Vector3 Player::PLAYER_MODEL_SCALE	 = DirectX::SimpleMath::Vector3(2.3f, 2.3f, 2.3f);
-
 
 /// <summary>
 /// コンストラクタ
 /// </summary>
-/// <param name="position">座標</param>
-/// <param name="health">体力</param>
-Player::Player(const DirectX::SimpleMath::Vector3& position, const int& health)
+/// <param name="playerParam">プレイヤーパラメータ</param>
+Player::Player(PlayerData* playerParam)
 	:
-	Object(position),
-	PlayerStatus(this,health),
+	m_playerParam(playerParam),
+	Object(playerParam->position),
+	PlayerStatus(this, playerParam->playerHealth),
 	PlayerMove(this),
 	m_animationTime(0.0f),
 	m_gravity(0.0f),
@@ -211,7 +201,7 @@ void Player::DethAnimation(const DX::StepTimer& timer)
 		m_sord->SordDeathAniamtion();
 	}
 	//	死亡アニメーション時間が終わったら確実に殺す
-	if (m_animationTime >= DETAH_ANIMATION_TIME)
+	if (m_animationTime >= m_playerParam->deathAnimationTime)
 	{
 		m_isAnimation	   = false;
 		m_isAlive		   = true;
@@ -239,7 +229,7 @@ void Player::WinAnimation(const DX::StepTimer& timer)
 		}
 	}
 	//	勝利アニメーション時間が終わったらフラグを変える
-	if (m_animationTime >= WIN_ANIMATION_TIME)
+	if (m_animationTime >= m_playerParam->winAnimationTime)
 	{
 		m_isAnimation = false;
 	}
@@ -280,7 +270,7 @@ void Player::CreateDeviceDependentResources()
 	//	当たり判定を追加する
 	AddColision(&m_playerSphere, Object::ColisionType::NormalColision);
 	//	大きさを設定する
-	SetScale(PLAYER_MODEL_SCALE);
+	SetScale(m_playerParam->modelScale);
 	//	要素の追加
 	m_playerParts.push_back(PlayerPartsFactory::CreatePlayerBody(this, this));
 	//	プレイヤーステータスの初期化
@@ -311,7 +301,7 @@ void Player::ArriveStage()
 	float y = Utility::Clamp(GetPosition().y,  0.0f		 , 50.0f);
 	float z = Utility::Clamp(GetPosition().z, -WALL_PLACE, WALL_PLACE);
 	//	重力
-	if (y > 0.0f) { m_gravity -= PLAYER_GRAVITY; }	else  { m_gravity = 0.0f; }
+	if (y > 0.0f) { m_gravity -= m_playerParam->gravity; }	else  { m_gravity = 0.0f; }
 	//	重力
 	y += m_gravity;
 	//	クランプの制御実装
@@ -378,5 +368,5 @@ void Player::UpdatePlayerAndSordLerp()
 	//	攻撃中ならラープを行わない
 	if (m_sord->IsAttack())	return;
 	//	ラープさせる
-	SetRotate(DirectX::SimpleMath::Quaternion::Lerp(GetRotate(), m_cursorRotate, TURN_PLAYER_SPEED));
+	SetRotate(DirectX::SimpleMath::Quaternion::Lerp(GetRotate(), m_cursorRotate, m_playerParam->turnSpeed));
 }

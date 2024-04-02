@@ -16,9 +16,9 @@ std::unique_ptr<MyLib::ParamManager> MyLib::ParamManager::m_paramManager = nullp
 /// ParamManagerの取得
 /// </summary>
 /// <returns>自身のポインター</returns>
-MyLib::ParamManager* MyLib::ParamManager::GetInstane()
+MyLib::ParamManager* const MyLib::ParamManager::GetInstane()
 {
-	//	ヌルポなら生成
+	//	ヌルなら生成
 	if (m_paramManager == nullptr)
 	{
 		//	スクリーンクラスのインスタンスを生成する
@@ -28,29 +28,44 @@ MyLib::ParamManager* MyLib::ParamManager::GetInstane()
 	return m_paramManager.get();
 }
 
+/// <summary>
+/// コンストラクタ
+/// </summary>
+MyLib::ParamManager::ParamManager()
+	:
+	m_playerData{}
+{
+
+}
+
+/// <summary>
+/// ロードデータ
+/// </summary>
 void MyLib::ParamManager::LoadData()
 {
-	m_playerData;
-
+	std::wstring jsonFileName = L"Resources/Data/PlayerParam.json";
 	//	ファイルを開く
-	std::ifstream raceTrackFile(L"Resources/Data/PlayerParam.json");
+	std::ifstream raceTrackFile(jsonFileName);
 	//	字列を JSON として解析
-	nlohmann::json raceTrackData = nlohmann::json::parse(raceTrackFile);
+	nlohmann::json playerParamkData		= nlohmann::json::parse(raceTrackFile);
 	//	最大ウェーブ数
-	m_playerData.playerHealth			= raceTrackData["HEALTH"];
-
+	m_playerData.playerHealth			= playerParamkData["HEALTH"];
+	//	座標を取得する
+	const auto& positionData			= playerParamkData["POSITION"];
 	//	座標
-	auto positionData = raceTrackData["POSITION"];
-	DirectX::SimpleMath::Vector3 position(positionData[0], positionData[1], positionData[2]);
+	DirectX::SimpleMath::Vector3		  position(positionData[0], positionData[1], positionData[2]);
 	m_playerData.position				= position;
-
 	//	モデルの大きさ
-	auto playerModel = raceTrackData["PLAYER MODEL SCALE"];
-	DirectX::SimpleMath::Vector3 modelScale(playerModel[0], playerModel[1], playerModel[2]);
+	const auto& playerScaleData			= playerParamkData["PLAYER_MODEL_SCALE"];
+	//	モデルの大きさ
+	DirectX::SimpleMath::Vector3		modelScale(playerScaleData[0], playerScaleData[1], playerScaleData[2]);
 	m_playerData.modelScale				= modelScale;
-
-	m_playerData.turnSpeed				= raceTrackData["TURN SPEED"];
-	m_playerData.winAnimationTime		= raceTrackData["WIN ANIMATION TIME"];
-	m_playerData.deathAnimationTime		= raceTrackData["DEATH ANIMATION TIME"];
-	m_playerData.gravity				= raceTrackData["GRAVITY"];
+	//	振り向く速度
+	m_playerData.turnSpeed				= playerParamkData["TURN_SPEED"];
+	//	勝利時のアニメーション
+	m_playerData.winAnimationTime		= playerParamkData["WIN_ANIMATION_TIME"];
+	//	死亡時のアニメーション
+	m_playerData.deathAnimationTime		= playerParamkData["DEATH_ANIMATION_TIME"];
+	//	重力
+	m_playerData.gravity				= playerParamkData["GRAVITY"];
 }

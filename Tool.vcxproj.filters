@@ -836,6 +836,9 @@
     <ClInclude Include="Game\MyLib\GameDatas\ParamManager.h">
       <Filter>Game\MyLib\GameDatas</Filter>
     </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerData.h">
+      <Filter>Game\MyLib\GameDatas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -1182,7 +1185,9 @@
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\FallingCherryBlossoms\FallingCherryBlossoms.cpp">
       <Filter>Game\MyLib\Scenes\PlayScene\Object\FallingCherryBlossoms</Filter>
     </ClCompile>
-    <ClCompile Include="Game\MyLib\GameDatas\ParamManager.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\ParamManager.cpp">
+      <Filter>Game\MyLib\GameDatas</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

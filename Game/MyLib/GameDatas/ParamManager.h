@@ -12,20 +12,19 @@ namespace MyLib
 {
 	class ParamManager
 	{
+		//	変数
 	public:
 
 
-
 		//	取得
-		static ParamManager* GetInstane();
-
+		static ParamManager* const GetInstane();
 		//	プレイヤーのデータを取得する
-		PlayerData GetPlayerData()	const { return m_playerData; }
+		PlayerData& GetPlayerData() { return m_playerData; }
 
+		//	データのロード
 		void LoadData();
 
 	private:
-
 
 		// コンストラクタ
 		ParamManager();
@@ -34,11 +33,11 @@ namespace MyLib
 		// コピーコンストラクタは許容しない
 		ParamManager(const ParamManager& object) = delete;
 
+		//	変数
 	private:
-
 		//	自身のポインターの格納庫
 		static std::unique_ptr<ParamManager> m_paramManager;
-
+		//	プレイヤーのデータ
 		PlayerData							 m_playerData;
 	};
 }

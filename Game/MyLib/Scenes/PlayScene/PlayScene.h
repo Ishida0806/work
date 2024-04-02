@@ -73,8 +73,6 @@ public:
 	//	左側の壁情報
 	static const DirectX::SimpleMath::Vector3 LEFT_WALL_SCALE;
 	static const DirectX::SimpleMath::Vector3 LEFT_WALL_POSITION;
-	//	プレイヤーの初期位置
-	static const DirectX::SimpleMath::Vector3 PLAYER_FIRST_POSITION;
 	//	カメラの補正座標
 	static const DirectX::SimpleMath::Vector3 CAMERA_OFFSET_POSITION;
 	//	勝った際の文字列
@@ -83,8 +81,6 @@ public:
 	static const std::string				  LOSE_STRING;
 	//	壁の大きさ
 	static const int						  WALL_SCLAE;
-	//	プレイヤーの体力
-	static const int						  PLAYER_HEALTH;
 	//	ヒット時のエフェクトの生成限界数
 	static const int						  HIT_RENDER_RESTRICTION;
 	//	花吹雪の生成数

@@ -1,13 +1,9 @@
-[
-  "Player" :
-   [
+{
 	"HEALTH"  	      : 100,
 	"POSITION"	      : [0.0,0.0,0.0],
-	"PLAYER MODEL SCALE"  : [2.3,2.3,2.3],
-	"TURN SPEED"	      : 0.3,
-	"WIN ANIMATION TIMW"  : 4.4,
-	"DEATH ANIMATION TIME":	5.2,
+	"PLAYER_MODEL_SCALE"  : [2.3,2.3,2.3],
+	"TURN_SPEED"	      : 0.3,
+	"WIN_ANIMATION_TIME"  : 4.4,
+	"DEATH_ANIMATION_TIME":	5.2,
 	"GRAVITY"	      :	0.005
-   ]
-
-]
+}

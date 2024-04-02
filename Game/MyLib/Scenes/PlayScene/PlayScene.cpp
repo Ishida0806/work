@@ -31,14 +31,10 @@ const DirectX::SimpleMath::Vector3 PlayScene::LEFT_WALL_POSITION	 = DirectX::Sim
 //	上側の壁のあたり判定の大きさ・壁の位置
 const DirectX::SimpleMath::Vector3 PlayScene::TOP_WALL_SCALE		 = DirectX::SimpleMath::Vector3(26.0f, 5.0f, 1.5f);
 const DirectX::SimpleMath::Vector3 PlayScene::TOP_WALL_POSITION		 = DirectX::SimpleMath::Vector3(0.0f, 0.0f, -27.5f);
-//	プレイヤーの初期位置
-const DirectX::SimpleMath::Vector3 PlayScene::PLAYER_FIRST_POSITION  = DirectX::SimpleMath::Vector3(0.0f, 0.0f, 0.0f);
 //	カメラの補正座標
 const DirectX::SimpleMath::Vector3 PlayScene::CAMERA_OFFSET_POSITION = DirectX::SimpleMath::Vector3(0.0f, 20.0f, 10.0f);
 //	突撃敵のあたったさいのノックバック
 const DirectX::SimpleMath::Vector3 PlayScene::TACLE_ENEMY_REACTION   = DirectX::SimpleMath::Vector3(2.4f, 12.5f, 5.4f);
-//	プレイヤーの体力
-const int PlayScene::PLAYER_HEALTH									 = 100;	
 //	当たったエフェクトの表示できる数
 const int PlayScene::HIT_RENDER_RESTRICTION							 = 30;
 //	花吹雪の生成数
@@ -264,7 +260,7 @@ void PlayScene::Finalize()
 void PlayScene::CreateDeviceDependentResources()
 {
 	//	プレイヤーの呼び出し
-	m_player = std::make_unique<Player>(PLAYER_FIRST_POSITION, PLAYER_HEALTH);
+	m_player = std::make_unique<Player>(&MyLib::ParamManager::GetInstane()->GetPlayerData());
 	//	プレイヤーの初期化
 	m_player->Initialize();
 	//	プレイシーンのウェーブを作成

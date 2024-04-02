@@ -24,18 +24,21 @@ Game::Game() noexcept(false)
     m_deviceResources(nullptr),
     m_fullscreen(TRUE)
 {
-    //  スクリーンリソースの初期化
+    //  スクリーンリソースの作成
     m_screens         = MyLib::ScreenResources::GetInstance();
-    //  インプットシステムの初期化
+    //  インプットシステムの作成
     m_input           = MyLib::InputSystem::GetInstance();
-    //  リソーシーズデータの初期化
+    //  リソーシーズデータの作成
     m_resourcesData   = MyLib::ResourcesData::GetInstance();
-    //  エレプスドタイムの初期化
+    //  エレプスドタイムの作成
     m_elapsed         = MyLib::ElapsedTime::GetInstance();
-    //  オーディオマネージャの初期化
+    //  オーディオマネージャの作成
     m_audioManager = AudioManager::GetInstance();
-    //　デバイスリソースの初期化
+    //  パラメータマネージャーの作成
+    m_paramManager = MyLib::ParamManager::GetInstane();
+    //　デバイスリソースの作成
     m_deviceResources = m_screens->GetDeviceResources();
+
     m_deviceResources->RegisterDeviceNotify(this);
 }
 
@@ -257,6 +260,8 @@ void Game::CreateDeviceDependentResources()
     m_sceneManager = std::make_unique<SceneManager>();
     //  初期化する
     m_audioManager->Initialize();
+    //  リソースのロード
+    m_paramManager->LoadData();
     // BGMとSEを登録する
     AddSound();
     //  画像を追加する

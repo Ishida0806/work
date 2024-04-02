@@ -9,7 +9,15 @@
 
 struct PlayerData
 {
-	
+	/// <summary>
+	/// コンストラクタ
+	/// </summary>
+	PlayerData()
+	{
+
+	}
+
+
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
@@ -20,25 +28,25 @@ struct PlayerData
 	/// <param name="winAnimationTime">勝利時のアニメーション</param>
 	/// <param name="deathAnimationTime">死亡時のアニメーション</param>
 	/// <param name="gravity">重力</param>
-	PlayerData(
-		const int& health , 
-		const DirectX::SimpleMath::Vector3& position, 
-		const DirectX::SimpleMath::Vector3& modelScale, 
-		const float& turnSpeed,
-		const float& winAnimationTime,
-		const float& deathAnimationTime,
-		const float& gravity
-	)
-		:
-		playerHealth(health),
-		position(position),
-		modelScale(modelScale),
-		winAnimationTime(winAnimationTime),
-		deathAnimationTime(deathAnimationTime),
-		gravity(gravity)
-	{
-
-	}
+	//PlayerData(
+	//	const int& health , 
+	//	const DirectX::SimpleMath::Vector3& position, 
+	//	const DirectX::SimpleMath::Vector3& modelScale, 
+	//	const float& turnSpeed,
+	//	const float& winAnimationTime,
+	//	const float& deathAnimationTime,
+	//	const float& gravity
+	//)
+	//	:
+	//	playerHealth(health),
+	//	position(position),
+	//	modelScale(modelScale),
+	//	turnSpeed(turnSpeed),
+	//	winAnimationTime(winAnimationTime),
+	//	deathAnimationTime(deathAnimationTime),
+	//	gravity(gravity)
+	//{
+	//}
 
 	/// <summary>
 	/// デストラクタ
@@ -61,6 +69,5 @@ public:
 	//	死亡時のアニメーション時間
 	float						 deathAnimationTime;
 	//	重力
-	float						 gravity;
-	
+	float						 gravity;	
 };

@@ -80,6 +80,7 @@
 #include "Game/MyLib/GameDatas/Collision.h"
 #include "Game/MyLib/GameDatas/Utility.h"
 #include "Game/MyLib/GameDatas/AudioManager.h"
+#include "Game/MyLib/GameDatas/ParamManager.h"
 ////////////////////////////////////////////////////////
 
 #ifdef _DEBUG

@@ -77,6 +77,8 @@ private:
     MyLib::ElapsedTime*                     m_elapsed;
     //  インプットシステム
     MyLib::InputSystem*                     m_input;
+    //  パラメータマネージャー
+    MyLib::ParamManager*                    m_paramManager;
     //  オーディオマネージャ
     AudioManager*                           m_audioManager;
     // デバイスリソース

@@ -49,20 +49,11 @@ public:
 	//定数
 public:
 
-	//	重力
-	static const float						  PLAYER_GRAVITY;
+
 	//	衝突事のノックバック
 	static const float						  REACTION;
-	//	死亡アニメーションの時間
-	static const float						  DETAH_ANIMATION_TIME;
-	//	勝利アニメーションの時間
-	static const float						  WIN_ANIMATION_TIME;
 	//	壁の場所
 	static const float						  WALL_PLACE;
-	//	プレイヤーの振り向く速度
-	static const float						  TURN_PLAYER_SPEED;
-	//	プレイヤーの大きさ
-	static const DirectX::SimpleMath::Vector3 PLAYER_MODEL_SCALE;
 
 	//	列挙型
 public:
@@ -83,8 +74,12 @@ public:
 
 	//	関数
 public: 
-	//	コンストラクタ
-	Player(const DirectX::SimpleMath::Vector3& position, const int& health);
+	
+	/// <summary>
+	/// コンストラクタ
+	/// </summary>
+	/// <param name="playerParam">プレイヤーパラメータ</param>
+	Player(PlayerData* playerParam);
 	//	デストラクタ
 	~Player();
 
@@ -172,7 +167,9 @@ private:
 	//	変数
 private:
 	//	プレイヤーのモデル
-	DirectX::Model* m_playerModel;
+	DirectX::Model*									 m_playerModel;
+	//	プレイヤーパラメータ
+	PlayerData*										 m_playerParam;
 	//	パーツ達
 	std::vector<std::unique_ptr<PlayerComponent>>	 m_playerParts;
 	//	プリミティブバッチ
