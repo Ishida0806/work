@@ -7,6 +7,7 @@
 //	
 #pragma once
 #include "PlayerData.h"
+#include "EnemyScore.h"
 
 namespace MyLib
 {
@@ -15,11 +16,12 @@ namespace MyLib
 		//	変数
 	public:
 
-
 		//	取得
 		static ParamManager* const GetInstane();
 		//	プレイヤーのデータを取得する
 		PlayerData& GetPlayerData() { return m_playerData; }
+		//	エネミーのデータを取得する
+		EnemyScore& GetEnemyScore()  { return m_enemyScore; }
 
 		//	データのロード
 		void LoadData();
@@ -39,5 +41,15 @@ namespace MyLib
 		static std::unique_ptr<ParamManager> m_paramManager;
 		//	プレイヤーのデータ
 		PlayerData							 m_playerData;
+		//	敵のスコアのデータ
+		EnemyScore							 m_enemyScore;
+
+		//	埋め込み関数
+	private:
+
+		//	プレイヤーのパラメータのロード
+		void LoadPlayerData();
+		//	敵のスコアのロード
+		void LoadEnemyScore();
 	};
 }

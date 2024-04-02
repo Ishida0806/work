@@ -17,37 +17,6 @@ struct PlayerData
 
 	}
 
-
-	/// <summary>
-	/// コンストラクタ
-	/// </summary>
-	/// <param name="health">体力</param>
-	/// <param name="position">座標</param>
-	/// <param name="modelScale">モデルの大きさ</param>
-	/// <param name="turnSpeed">振り向く速度</param>
-	/// <param name="winAnimationTime">勝利時のアニメーション</param>
-	/// <param name="deathAnimationTime">死亡時のアニメーション</param>
-	/// <param name="gravity">重力</param>
-	//PlayerData(
-	//	const int& health , 
-	//	const DirectX::SimpleMath::Vector3& position, 
-	//	const DirectX::SimpleMath::Vector3& modelScale, 
-	//	const float& turnSpeed,
-	//	const float& winAnimationTime,
-	//	const float& deathAnimationTime,
-	//	const float& gravity
-	//)
-	//	:
-	//	playerHealth(health),
-	//	position(position),
-	//	modelScale(modelScale),
-	//	turnSpeed(turnSpeed),
-	//	winAnimationTime(winAnimationTime),
-	//	deathAnimationTime(deathAnimationTime),
-	//	gravity(gravity)
-	//{
-	//}
-
 	/// <summary>
 	/// デストラクタ
 	/// </summary>

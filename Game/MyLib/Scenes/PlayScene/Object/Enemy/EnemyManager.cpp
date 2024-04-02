@@ -276,7 +276,7 @@ void EnemyManager::DeadObject()
 					if (type == Object::ObjectType::NormalEnemy)
 					{
 						//	スコアを上げて撃破数をカウント
-						m_playInfo->UpScore(PlayScene::NORMAL_ENEMY_SCORE);
+						m_playInfo->UpScore(MyLib::ParamManager::GetInstane()->GetEnemyScore().normalScore);
 						//	倒した数を記録する
 						m_playInfo->KnockNormal();
 						//	経験値を取得し設定する
@@ -286,7 +286,7 @@ void EnemyManager::DeadObject()
 					if (type == Object::ObjectType::TackleEnemy)
 					{
 						//	スコアを上げて撃破数をカウント
-						m_playInfo->UpScore(PlayScene::TACLE_ENEMY_SCORE);
+						m_playInfo->UpScore(MyLib::ParamManager::GetInstane()->GetEnemyScore().tacleScore);
 						//	倒した数を記録する
 						m_playInfo->KnockTackle();
 						//	経験値を取得し設定する
@@ -296,7 +296,7 @@ void EnemyManager::DeadObject()
 					if (type == Object::ObjectType::BossEnemy)
 					{
 						//	スコアを上げて撃破数をカウント
-						m_playInfo->UpScore(PlayScene::BOSS_ENEMY_SCORE);
+						m_playInfo->UpScore(MyLib::ParamManager::GetInstane()->GetEnemyScore().bossScore);
 						//	倒した数を記録する
 						m_playInfo->KnockBoss();
 						//	経験値を取得し設定する

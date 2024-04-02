@@ -85,10 +85,6 @@ public:
 	static const int						  HIT_RENDER_RESTRICTION;
 	//	花吹雪の生成数
 	static const int						  FALLING_CHERRY_BLOSSOMS_GENERATED;
-	//	敵たちのスコア
-	static const int						  NORMAL_ENEMY_SCORE;
-	static const int						  TACLE_ENEMY_SCORE;
-	static const int						  BOSS_ENEMY_SCORE;
 	//	エフェクトのサイズ
 	static const float						  EFFECT_SIZE;
 	//	突撃敵のリアクション

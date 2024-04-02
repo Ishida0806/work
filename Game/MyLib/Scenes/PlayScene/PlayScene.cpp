@@ -49,12 +49,7 @@ const float PlayScene::OTHER_ENEMY_REACTION							 = 1.4f;
 const float PlayScene::FADE_TIME									 = 5.4f;
 //	終了時間
 const float PlayScene::FINISHED_TIME								 = 2.8f;
-//	通常敵のスコア
-const int PlayScene::NORMAL_ENEMY_SCORE								 = 50;
-//	突撃敵のスコア
-const int PlayScene::TACLE_ENEMY_SCORE								 = 75;
-//	ボスのスコア
-const int PlayScene::BOSS_ENEMY_SCORE								 = 500;
+
 
 /// <summary>
 /// コンストラクタ

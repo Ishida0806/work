@@ -839,6 +839,9 @@
     <ClInclude Include="Game\MyLib\GameDatas\PlayerData.h">
       <Filter>Game\MyLib\GameDatas</Filter>
     </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\EnemyScore.h">
+      <Filter>Game\MyLib\GameDatas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
