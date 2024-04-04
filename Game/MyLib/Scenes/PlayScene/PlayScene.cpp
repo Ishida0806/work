@@ -593,6 +593,15 @@ void PlayScene::UIRender()
 	m_miniMap->Draw();
 	//	レベルアップのカードの描画
 	m_levelCard->Draw();
+
+	auto v = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"TutorialGuide01");
+
+	m_screen->GetSpriteBatch()->Draw
+	(
+		v,
+		DirectX::SimpleMath::Vector2(150.0f,500.0f)
+	);
+
 	//	ポーズ中なら描画する
 	if (m_pause->IsPause())	m_pause->Render();
 	//	描画を終了する

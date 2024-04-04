@@ -322,9 +322,9 @@ void Game::CreateProjection()
 /// </summary>
 void Game::CreateScene()
 {
-   m_sceneManager->ChangeScene<TitleScene>(this);
+   //m_sceneManager->ChangeScene<TitleScene>(this);
    //m_sceneManager->ChangeScene<StageSelectScene>(this);
-   //m_sceneManager->ChangeScene<PlayScene>(this, m_screens);
+   m_sceneManager->ChangeScene<PlayScene>(this, m_screens);
    //m_sceneManager->ChangeScene<ResultScene>(this);
 }
 
@@ -455,6 +455,7 @@ void Game::AddTexture()
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"WaveDisplay");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"EnemyHeart");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"EnemyCoverHeart");
+    MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"TutorialGuide01");
 }
 
 /// <summary>
