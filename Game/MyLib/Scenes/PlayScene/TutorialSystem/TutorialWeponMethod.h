@@ -14,8 +14,7 @@ public:
 	//	•Ï”
 private:
 
-	//	ƒ}ƒEƒX‚ğ“®‚©‚µ‚½‚©”»’è‚ğ‚Æ‚éêŠ
-	DirectX::SimpleMath::Vector2 m_beforeMousePosition;
+	
 
 	//	ŠÖ”
 public:
