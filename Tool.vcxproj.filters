@@ -416,7 +416,7 @@
     <Filter Include="Game\MyLib\GameDatas\Effect\EnemyHeart">
       <UniqueIdentifier>{2cac4f58-165d-4323-bbba-b17ae954222d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\MyLib\Scenes\PlayScene\Tutorial">
+    <Filter Include="Game\MyLib\Scenes\PlayScene\TutorialSystem">
       <UniqueIdentifier>{68cde912-58b5-4308-919c-773e667e680f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -845,8 +845,8 @@
     <ClInclude Include="Game\MyLib\GameDatas\EnemyScore.h">
       <Filter>Game\MyLib\GameDatas</Filter>
     </ClInclude>
-    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Tutorial\TutorialSystem.h">
-      <Filter>Game\MyLib\Scenes\PlayScene\Tutorial</Filter>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialSystem.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1197,8 +1197,8 @@
     <ClCompile Include="Game\MyLib\GameDatas\ParamManager.cpp">
       <Filter>Game\MyLib\GameDatas</Filter>
     </ClCompile>
-    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Tutorial\TutorialSystem.cpp">
-      <Filter>Game\MyLib\Scenes\PlayScene\Tutorial</Filter>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialSystem.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
