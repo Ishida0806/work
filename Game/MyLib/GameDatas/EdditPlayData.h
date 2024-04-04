@@ -49,6 +49,15 @@ public:
 	bool IsClearedStage2() { return m_playData["STAGE_2_CLEARED"]; }
 	//	ステージ3はクリアしたか？
 	bool IsClearedStage3() { return m_playData["STAGE_3_CLEARED"]; }
+	//	チュートリアルをクリア
+	void CleardTutorial()  
+	{ 
+		m_playData["FIRST_OPEN"] = false; 
+
+		//	セーブ
+		std::ofstream o("Resources/Data/PlayData.json");
+		o << std::setw(4) << m_playData << std::endl;
+	}
 
 	//	変数
 private:

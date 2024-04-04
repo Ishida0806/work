@@ -29,9 +29,9 @@ public:
 public:
 
 	//	敵のマネージャーを取得する
-	inline EnemyManager* GetEnemyManager()	const					{ return m_enemyManager; }
+	inline EnemyManager* GetEnemyManager()	const						{ return m_enemyManager; }
 	//	プレイシーンを取得する
-	inline PlayScene*	GetPlayScene ()		const					{ return m_playScene; }
+	inline PlayScene*	 GetPlayScene ()	const						{ return m_playScene; }
 	//	チュートリアル案内画像の設定
 	void SetGuideTexture(ID3D11ShaderResourceView* texture);
 

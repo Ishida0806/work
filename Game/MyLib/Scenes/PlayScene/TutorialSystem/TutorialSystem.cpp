@@ -46,6 +46,8 @@ void TutorialSystem::Initialize()
 	m_fsm->RegisterState(TutorialState::FinishMethod,	 new TutorialFinishMethod());
 	//	始めるステートを選ぶ
 	m_fsm->Start(TutorialState::MovingMethod);
+	//	画像の取得
+	m_guideTutorialTexture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"TutorialGuide01");
 }
 
 /// <summary>

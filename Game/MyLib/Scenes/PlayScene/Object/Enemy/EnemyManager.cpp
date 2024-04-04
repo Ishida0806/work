@@ -79,7 +79,7 @@ void EnemyManager::Initialize()
 	//	突撃敵の限界生成数
 	m_tackleReaction = TACLE_ENEMY_RESTRICTION  + INCREASE_WORLD_LEVEL * m_playScene->GetWordLevel();
 	//	スポーンする敵を選ぶ
-	SelectSpawnEnemy();
+	if(!m_playScene->IsFirstOpen())	SelectSpawnEnemy();
 }
 
 /// <summary>
@@ -133,7 +133,7 @@ void EnemyManager::Update(const DX::StepTimer& timer)
 	else
 	{
 		//	敵の数がゼロなら次のウェーブで
-		if (m_enemys.size() == 0)
+		if (m_enemys.size() == 0 && !m_playScene->IsFirstOpen())
 		{
 			//	次のウェーブに行く
 			m_playSceneWave->NextWave();

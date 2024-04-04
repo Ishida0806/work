@@ -1,5 +1,5 @@
 {
-	"NORMAL_ENEMY_SCORE"  	      : 50,
+	"NORMAL_ENEMY_SCORE"  	     : 50,
 	"TACLE_ENEMY_SCORE"  	      : 75,
 	"BOSS_ENEMY_SCORE"  	      : 500
 }

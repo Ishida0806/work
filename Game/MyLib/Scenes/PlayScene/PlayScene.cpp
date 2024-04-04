@@ -110,7 +110,7 @@ void PlayScene::Update(const DX::StepTimer& timer)
 	//	カメラを更新する
 	UpdateCamera(timer);
 	//	ゲームが終了しているなら戻す
-	if (m_isFinish)	return;
+	if (m_isFinish)					return;
 	//	レベルアップのカードの更新
 	if (m_levelCard->Update(timer))	return;
 	//	ポストエフェクトの更新
@@ -142,19 +142,34 @@ void PlayScene::Update(const DX::StepTimer& timer)
 	//	ミニマップを更新する
 	UpdateMiniMap(timer);
 	//	チュートリアル中か？ && 	プレイシーンのウェーブの更新する
-	if (m_isFirstOpen) { m_tutorialSystem->Update(timer); }	else { m_playSceneWave->Update(); }
+	if (m_isFirstOpen) 
+	{ 
+		m_tutorialSystem->Update(timer);
+		//	途中で変わったら帰れ
+		if (!m_isFirstOpen)		
+		{
+			//	プレイシーン
+			m_game->GetSceneManager()->ChangeScene<PlayScene>(m_game, m_screen, GetWordLevel());
+
+			return;
+		}
+	} 
+	else 
+	{ 
+		m_playSceneWave->Update(); 
+	}
 	//	ヒットエフェクトを更新
 	for (const auto& hitRender : m_hitRenders)				hitRender->Update();
 	//	ヒットエフェクトを更新
 	for (const auto& hitRender : m_hitBulletRenders)		hitRender->Update();
 	//	ヒットエフェクトを更新
-	for (const auto& particle : m_hitBulletPatricles)		particle->Update(timer);
+	for (const auto& particle  : m_hitBulletPatricles)		particle->Update(timer);
 	//	ステージの型にキャスト
 	StageSelectScene::CHOOSE_STAGE stage = static_cast<StageSelectScene::CHOOSE_STAGE>(GetWordLevel());
 	//	ステージ4以外は終了条件が存在しているため処理を行う
 	if (stage != StageSelectScene::CHOOSE_STAGE::STAGE_4)
 	{
-		if (m_playSceneWave->IsFinalWave() && m_enemyManager->GetEnemy().size() == 0)
+		if (m_playSceneWave->IsFinalWave() && m_enemyManager->GetEnemy().size() == 0 && !m_isFirstOpen)
 		{
 			//	勝った
 			m_gameResultString = WIN_STRING;
@@ -169,7 +184,7 @@ void PlayScene::Update(const DX::StepTimer& timer)
 		}
 	}
 	//	サイズが0じゃないなら
-	if (m_gameResultString.size() != 0 && !m_isFirstOpen)
+	if (m_gameResultString.size() && !m_isFirstOpen)
 	{
 		//	ゲームの勝敗をプレイヤーに教える
 		m_player->WhyGameResult(m_gameResultString);
@@ -256,6 +271,12 @@ void PlayScene::Finalize()
 /// </summary>
 void PlayScene::CreateDeviceDependentResources()
 {
+	//	プレイデータ
+	EdditPlayData	playData;
+	//	初回起動か
+	playData.OpenPlayData();
+	//	クリア
+	m_isFirstOpen = playData.IsFirstOpen();
 	//	プレイヤーの呼び出し
 	m_player = std::make_unique<Player>(&MyLib::ParamManager::GetInstane()->GetPlayerData());
 	//	プレイヤーの初期化
@@ -356,10 +377,8 @@ void PlayScene::CreateDeviceDependentResources()
 	m_gameResultString = {};
 	//	チュートリアルを作成する
 	m_tutorialSystem = std::make_unique<TutorialSystem>(this , m_enemyManager.get());
-	//	初回起動か
-	EdditPlayData playData;
-	playData.OpenPlayData();
-	m_isFirstOpen = playData.IsFirstOpen();
+	//	チュートリアルを初期化する
+	m_tutorialSystem->Initialize();
 }
 
 /// <summary>
@@ -563,7 +582,7 @@ void PlayScene::HitBulletRnder(const DirectX::SimpleMath::Vector3& position)
 /// </summary>
 void PlayScene::ChangeSceneTitle()
 {
-	//	リザルトシーン
+	//	タイトルシーン
 	m_game->GetSceneManager()->ChangeScene<TitleScene>(m_game);
 }
 
@@ -583,8 +602,12 @@ void PlayScene::FinishTutorial()
 {
 	//	エフェクトの入場処理の開始
 	m_game->GetChangeEffect()->RequestChangeEffect(ChangeEffect::ChangeSceneType::Play, ChangeEffect::ChangeSceneFadeType::To);
-	//	初回起動終了
-	m_isFirstOpen = false;
+	//	プレイデータ
+	EdditPlayData	playData;
+	//	チュートリアルクリア
+	playData.CleardTutorial();
+	//	更新
+	m_isFirstOpen = playData.IsFirstOpen();
 }
 
 /// <summary>
@@ -615,7 +638,7 @@ void PlayScene::UIRender()
 	//	ポーズ中なら描画する
 	if (m_pause->IsPause())	m_pause->Render();
 	//	チュートリアルの描画
-	m_tutorialSystem->Render();
+	if(m_isFirstOpen)		m_tutorialSystem->Render();
 	//	描画を終了する
 	m_screen->GetSpriteBatch()->End();
 }

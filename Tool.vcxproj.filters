@@ -1320,7 +1320,6 @@
     <None Include="Resources\Sharders\Particle.hlsli">
       <Filter>Sharders</Filter>
     </None>
-    <None Include="Resources\Data\EnemyScore.json" />
     <None Include="Resources\Data\StageWave-0.json">
       <Filter>JsonData</Filter>
     </None>
@@ -1334,6 +1333,9 @@
       <Filter>JsonData</Filter>
     </None>
     <None Include="Resources\Data\PlayData.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="Resources\Data\EnemyScore.json">
       <Filter>JsonData</Filter>
     </None>
   </ItemGroup>
