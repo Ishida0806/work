@@ -9,17 +9,17 @@
 #include "Bullet.h"
 
 //	進行速度
-const float						   Bullet::SPEED			= 0.22f;
+const float						   Bullet::SPEED					= 0.22f;
 //	敵弾の速度
-const DirectX::SimpleMath::Vector3 Bullet::ENEMY_SPEED		= DirectX::SimpleMath::Vector3(0.0f, 0.0f, 0.1f);
+const DirectX::SimpleMath::Vector3 Bullet::ENEMY_SPEED				= DirectX::SimpleMath::Vector3(0.0f, 0.0f, 0.1f);
 //	ボス弾の速度
-const DirectX::SimpleMath::Vector3 Bullet::BOSS_SPEED		= DirectX::SimpleMath::Vector3(0.0f, 0.0f, 0.15f);
+const DirectX::SimpleMath::Vector3 Bullet::BOSS_SPEED				= DirectX::SimpleMath::Vector3(0.0f, 0.0f, 0.15f);
 //	反射された際の進む速度
-const DirectX::SimpleMath::Vector3 Bullet::REF_SPEED		= DirectX::SimpleMath::Vector3(0.0f, 0.0f, 0.25f);
+const DirectX::SimpleMath::Vector3 Bullet::REF_SPEED				= DirectX::SimpleMath::Vector3(0.0f, 0.0f, 0.25f);
 //	敵の弾のあたり判定の大きさ
-const float Bullet::BULLET_RADIUS							= 0.4f;
+const float						   Bullet::BULLET_RADIUS			= 0.4f;
 //	ボスの弾のあたり判定の大きさ
-const float Bullet::BOSS_BULLET_RADIUS						= 0.5f;
+const float						   Bullet::BOSS_BULLET_RADIUS		= 0.5f;
 
 
 /// <summary>
