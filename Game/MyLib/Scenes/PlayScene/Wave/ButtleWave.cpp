@@ -65,9 +65,9 @@ std::vector<EnemyData> ButtleWave::OpenMap()
 		//	スポーンするウェーブ
 		int spawnWave = data[6];
 		//	座標・タイプ・体力・力・スポーンするウェーブ
-		EnemyData enemyData(position, enemyType, health, power, spawnWave);
+		EnemyData ed(position, enemyType, health, power, spawnWave);
 		//	データを入れる
-		enemyDatas.push_back(enemyData);
+		enemyDatas.push_back(ed);
 	}
 
 	return enemyDatas;

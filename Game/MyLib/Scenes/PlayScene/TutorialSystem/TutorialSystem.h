@@ -32,9 +32,8 @@ public:
 	inline EnemyManager* GetEnemyManager()	const					{ return m_enemyManager; }
 	//	プレイシーンを取得する
 	inline PlayScene*	GetPlayScene ()		const					{ return m_playScene; }
-
 	//	チュートリアル案内画像の設定
-	inline void SetGuideTexture(ID3D11ShaderResourceView* texture);
+	void SetGuideTexture(ID3D11ShaderResourceView* texture);
 
 	//	エイリアス宣言
 public:
@@ -53,7 +52,6 @@ private:
 	EnemyManager*					m_enemyManager;
 	//	プレイシーン
 	PlayScene*						m_playScene;
-	
 
 	//	関数
 public:

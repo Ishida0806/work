@@ -445,10 +445,10 @@ void EnemyManager::SelectSpawnEnemy()
 /// “G‚ğì¬‚·‚é
 /// </summary>
 /// <param name="enemy">“G</param>
-void EnemyManager::CreateEnemy(const Object::ObjectType& enemy)
+void EnemyManager::CreateEnemy(const EnemyType& enemy)
 {
 	//	’Êí“G
-	if (enemy == Object::ObjectType::NormalEnemy)
+	if (enemy == EnemyType::NormalEnemy)
 	{
 		m_enemys.push_back
 		(
@@ -463,7 +463,7 @@ void EnemyManager::CreateEnemy(const Object::ObjectType& enemy)
 		);
 	}
 	//	“ËŒ‚“G
-	else if (enemy == Object::ObjectType::TackleEnemy)
+	else if (enemy == EnemyType::TackleEnemy)
 	{
 		m_enemys.push_back
 		(
@@ -478,7 +478,7 @@ void EnemyManager::CreateEnemy(const Object::ObjectType& enemy)
 		);
 	}
 	//	ƒ{ƒX“G
-	else if (enemy == Object::ObjectType::BossEnemy)
+	else if (enemy == EnemyType::BossEnemy)
 	{
 		m_enemys.push_back
 		(

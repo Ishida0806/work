@@ -40,10 +40,10 @@ void TutorialSystem::Initialize()
 	//	有限ステートマシーンを作成
 	m_fsm = std::make_unique<TUTORIALSTATE>(this);
 	//	ステートの追加
-	m_fsm->RegisterState(TutorialState::MovingMethod, new TutorialMovingMethod());
+	m_fsm->RegisterState(TutorialState::MovingMethod,	 new TutorialMovingMethod());
 	m_fsm->RegisterState(TutorialState::KillEnemyMethod, new TutorialKillEnemyMethod());
-	m_fsm->RegisterState(TutorialState::WeponMethod, new TutorialWeponMethod());
-	m_fsm->RegisterState(TutorialState::FinishMethod, new TutorialFinishMethod());
+	m_fsm->RegisterState(TutorialState::WeponMethod,	 new TutorialWeponMethod());
+	m_fsm->RegisterState(TutorialState::FinishMethod,	 new TutorialFinishMethod());
 	//	始めるステートを選ぶ
 	m_fsm->Start(TutorialState::MovingMethod);
 }
@@ -63,6 +63,11 @@ void TutorialSystem::Update(const DX::StepTimer& timer)
 /// </summary>
 void TutorialSystem::Render()
 {
+	MyLib::ScreenResources::GetInstance()->GetSpriteBatch()->Draw
+	(
+		m_guideTutorialTexture,
+		DirectX::SimpleMath::Vector2(150.0f, 500.0f)
+	);
 }
 
 /// <summary>
@@ -76,7 +81,7 @@ void TutorialSystem::Finalize()
 /// チュートリアル案内画像の設定
 /// </summary>
 /// <param name="texture">画像</param>
-inline void TutorialSystem::SetGuideTexture(ID3D11ShaderResourceView* texture)
+void TutorialSystem::SetGuideTexture(ID3D11ShaderResourceView* texture)
 {
 	m_guideTutorialTexture = texture;
 }

@@ -202,6 +202,7 @@
     <ClInclude Include="Game\MyLib\GameDatas\ColisionObjects.h" />
     <ClInclude Include="Game\MyLib\GameDatas\Collision.h" />
     <ClInclude Include="Game\MyLib\GameDatas\Config.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\EdditPlayData.h" />
     <ClInclude Include="Game\MyLib\GameDatas\ElapsedTime.h" />
     <ClInclude Include="Game\MyLib\GameDatas\EnemyData.h" />
     <ClInclude Include="Game\MyLib\GameDatas\EnemyScore.h" />

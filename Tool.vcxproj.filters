@@ -863,6 +863,9 @@
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialFinishMethod.h">
       <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
     </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\EdditPlayData.h">
+      <Filter>Game\MyLib\GameDatas</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />

@@ -14,6 +14,7 @@
 #include "Game/MyLib/Scenes/ResultScene/ResultScene.h"
 ////////////////////////////////////////////////////////////////
 
+#include "Game/MyLib/GameDatas/EdditPlayData.h"
 
 //	勝った際の文字列
 const std::string				   PlayScene::WIN_STRING			 = "win";
@@ -140,17 +141,8 @@ void PlayScene::Update(const DX::StepTimer& timer)
 	m_colisionObjects->UpdateColision();
 	//	ミニマップを更新する
 	UpdateMiniMap(timer);
-	//	チュートリアル中か？
-	if (m_isFirstOpen)
-	{
-		//	チュートリアルの更新
-		m_tutorialSystem->Update(timer);
-	}
-	else
-	{
-		//	プレイシーンのウェーブの更新する
-		m_playSceneWave->Update();
-	}
+	//	チュートリアル中か？ && 	プレイシーンのウェーブの更新する
+	if (m_isFirstOpen) { m_tutorialSystem->Update(timer); }	else { m_playSceneWave->Update(); }
 	//	ヒットエフェクトを更新
 	for (const auto& hitRender : m_hitRenders)				hitRender->Update();
 	//	ヒットエフェクトを更新
@@ -177,7 +169,7 @@ void PlayScene::Update(const DX::StepTimer& timer)
 		}
 	}
 	//	サイズが0じゃないなら
-	if (m_gameResultString.size() != 0)
+	if (m_gameResultString.size() != 0 && !m_isFirstOpen)
 	{
 		//	ゲームの勝敗をプレイヤーに教える
 		m_player->WhyGameResult(m_gameResultString);
@@ -364,6 +356,10 @@ void PlayScene::CreateDeviceDependentResources()
 	m_gameResultString = {};
 	//	チュートリアルを作成する
 	m_tutorialSystem = std::make_unique<TutorialSystem>(this , m_enemyManager.get());
+	//	初回起動か
+	EdditPlayData playData;
+	playData.OpenPlayData();
+	m_isFirstOpen = playData.IsFirstOpen();
 }
 
 /// <summary>

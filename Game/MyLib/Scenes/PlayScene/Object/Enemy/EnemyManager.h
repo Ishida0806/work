@@ -5,6 +5,7 @@
 //	
 #pragma once
 
+class Object;
 class Player;
 class PlayScene;
 class PlaySceneWave;
@@ -13,14 +14,25 @@ class Enemy;
 
 class EnemyManager
 {
+	//	列挙型
+public:
+
+	// 敵タイプ
+	enum class EnemyType
+	{
+		NormalEnemy = 0,
+		TackleEnemy = 1,
+		BossEnemy = 2,
+
+		OverID
+	};
 	//	アクセサ
 public:
 
 	//	ボスを取得する
 	inline std::vector<std::shared_ptr<Enemy>>&   GetEnemy()		noexcept { return m_enemys; };
-
 	//	敵を作成する
-	void CreateEnemy(const Object::ObjectType& enemy);
+	void CreateEnemy(const EnemyType& enemy);
 
 	//	定数
 public:
@@ -50,18 +62,7 @@ public:
 	//	敵の力
 	static const int						  ENEMY_POWER;
 
-	//	列挙型
-public:
 
-	// 方向
-	enum class EnemyType
-	{
-		NormalEnemy = 0,
-		TackleEnemy = 1,
-		BossEnemy	= 2,
-
-		OverID
-	};
 
 	//	構造体
 private:

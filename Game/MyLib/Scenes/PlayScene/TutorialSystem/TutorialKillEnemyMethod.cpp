@@ -25,7 +25,7 @@ TutorialKillEnemyMethod::~TutorialKillEnemyMethod()
 void TutorialKillEnemyMethod::Enter(TutorialSystem::TUTORIALSTATE* finiteStateMachine)
 {
 	//	通常敵の作成
-	finiteStateMachine->GetOwner()->GetEnemyManager()->CreateEnemy(Object::ObjectType::NormalEnemy);
+	finiteStateMachine->GetOwner()->GetEnemyManager()->CreateEnemy(EnemyManager::EnemyType::NormalEnemy);
 }
 
 /// <summary>
@@ -35,6 +35,8 @@ void TutorialKillEnemyMethod::Enter(TutorialSystem::TUTORIALSTATE* finiteStateMa
 /// <param name="elapsedTime">経過時間</param>
 void TutorialKillEnemyMethod::Execute(TutorialSystem::TUTORIALSTATE* finiteStateMachine, const DX::StepTimer& timer)
 {
+	UNREFERENCED_PARAMETER(timer);
+
 	//	敵を倒したら次のステート
 	if (finiteStateMachine->GetOwner()->GetEnemyManager()->GetEnemy().size() == 0)
 	{
@@ -51,4 +53,5 @@ void TutorialKillEnemyMethod::Execute(TutorialSystem::TUTORIALSTATE* finiteState
 /// <param name="finiteStateMachine">オーナー</param>
 void TutorialKillEnemyMethod::Exit(TutorialSystem::TUTORIALSTATE* finiteStateMachine)
 {
+	UNREFERENCED_PARAMETER(finiteStateMachine);
 }
