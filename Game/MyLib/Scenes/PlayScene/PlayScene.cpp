@@ -63,6 +63,7 @@ PlayScene::PlayScene(Game* game, MyLib::ScreenResources* screen, int stagelevel)
 	m_worldLevel(stagelevel),
 	m_isFinish(false),
 	m_isFadeOutTask(false),
+	m_isFirstOpen(false),
 	m_IsFade(true),
 	m_gameResultString(),
 	m_fadeTime(0.0f),
@@ -139,8 +140,17 @@ void PlayScene::Update(const DX::StepTimer& timer)
 	m_colisionObjects->UpdateColision();
 	//	ミニマップを更新する
 	UpdateMiniMap(timer);
-	//	プレイシーンのウェーブの更新する
-	m_playSceneWave->Update();
+	//	チュートリアル中か？
+	if (m_isFirstOpen)
+	{
+		//	チュートリアルの更新
+		m_tutorialSystem->Update(timer);
+	}
+	else
+	{
+		//	プレイシーンのウェーブの更新する
+		m_playSceneWave->Update();
+	}
 	//	ヒットエフェクトを更新
 	for (const auto& hitRender : m_hitRenders)				hitRender->Update();
 	//	ヒットエフェクトを更新
@@ -352,6 +362,8 @@ void PlayScene::CreateDeviceDependentResources()
 	ShowMouse(true);
 	//	一応からにしておく
 	m_gameResultString = {};
+	//	チュートリアルを作成する
+	m_tutorialSystem = std::make_unique<TutorialSystem>(this , m_enemyManager.get());
 }
 
 /// <summary>
@@ -569,6 +581,17 @@ void PlayScene::ShowMouse(const bool& isShow)
 }
 
 /// <summary>
+/// チュートリアル終了
+/// </summary>
+void PlayScene::FinishTutorial()
+{
+	//	エフェクトの入場処理の開始
+	m_game->GetChangeEffect()->RequestChangeEffect(ChangeEffect::ChangeSceneType::Play, ChangeEffect::ChangeSceneFadeType::To);
+	//	初回起動終了
+	m_isFirstOpen = false;
+}
+
+/// <summary>
 /// UIを描画する
 /// </summary>
 void PlayScene::UIRender()
@@ -593,17 +616,10 @@ void PlayScene::UIRender()
 	m_miniMap->Draw();
 	//	レベルアップのカードの描画
 	m_levelCard->Draw();
-
-	auto v = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"TutorialGuide01");
-
-	m_screen->GetSpriteBatch()->Draw
-	(
-		v,
-		DirectX::SimpleMath::Vector2(150.0f,500.0f)
-	);
-
 	//	ポーズ中なら描画する
 	if (m_pause->IsPause())	m_pause->Render();
+	//	チュートリアルの描画
+	m_tutorialSystem->Render();
 	//	描画を終了する
 	m_screen->GetSpriteBatch()->End();
 }

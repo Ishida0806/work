@@ -19,6 +19,9 @@ public:
 	//	ƒ{ƒX‚ğæ“¾‚·‚é
 	inline std::vector<std::shared_ptr<Enemy>>&   GetEnemy()		noexcept { return m_enemys; };
 
+	//	“G‚ğì¬‚·‚é
+	void CreateEnemy(const Object::ObjectType& enemy);
+
 	//	’è”
 public:
 

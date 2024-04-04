@@ -419,6 +419,9 @@
     <Filter Include="Game\MyLib\Scenes\PlayScene\TutorialSystem">
       <UniqueIdentifier>{68cde912-58b5-4308-919c-773e667e680f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="JsonData">
+      <UniqueIdentifier>{25da2aa5-16b4-4d06-853b-c83e6c3ded83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -848,6 +851,18 @@
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialSystem.h">
       <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
     </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialMovingMethod.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialWeponMethod.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialKillEnemyMethod.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialFinishMethod.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -1200,6 +1215,18 @@
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialSystem.cpp">
       <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
     </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialMovingMethod.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialWeponMethod.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialKillEnemyMethod.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialFinishMethod.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
@@ -1289,6 +1316,22 @@
     <None Include="packages.config" />
     <None Include="Resources\Sharders\Particle.hlsli">
       <Filter>Sharders</Filter>
+    </None>
+    <None Include="Resources\Data\EnemyScore.json" />
+    <None Include="Resources\Data\StageWave-0.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="Resources\Data\StageWave-1.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="Resources\Data\StageWave-2.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="Resources\Data\PlayerParam.json">
+      <Filter>JsonData</Filter>
+    </None>
+    <None Include="Resources\Data\PlayData.json">
+      <Filter>JsonData</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -95,6 +95,7 @@ void EnemyManager::Update(const DX::StepTimer& timer)
 
 	for (const auto& enemy : m_enemys)
 	{
+		//	敵の種類
 		Object::ObjectType type = enemy->GetType();
 
 		if (type == Object::ObjectType::NormalEnemy)
@@ -118,6 +119,7 @@ void EnemyManager::Update(const DX::StepTimer& timer)
 	}
 
 	StageSelectScene::CHOOSE_STAGE stage = static_cast<StageSelectScene::CHOOSE_STAGE>(m_playScene->GetWordLevel());
+
 	//	最終ステージなら敵が湧き出す
 	if (stage == StageSelectScene::CHOOSE_STAGE::STAGE_4)
 	{
@@ -436,4 +438,58 @@ void EnemyManager::SelectSpawnEnemy()
 
 	//	データはとれたので出現させたデータは削除
 	m_playSceneWave->DeleteSpawnedEnemyData();
+}
+
+
+/// <summary>
+/// 敵を作成する
+/// </summary>
+/// <param name="enemy">敵</param>
+void EnemyManager::CreateEnemy(const Object::ObjectType& enemy)
+{
+	//	通常敵
+	if (enemy == Object::ObjectType::NormalEnemy)
+	{
+		m_enemys.push_back
+		(
+			EnemyFactory::CreateNormalEnemies
+			(
+				DirectX::SimpleMath::Vector3::Zero,
+				NORMAL_ENEMY_HELATH,
+				ENEMY_POWER,
+				m_playScene->GetWordLevel(),
+				Object::ObjectType::NormalEnemy
+			)
+		);
+	}
+	//	突撃敵
+	else if (enemy == Object::ObjectType::TackleEnemy)
+	{
+		m_enemys.push_back
+		(
+			EnemyFactory::CreateTackleEnemies
+			(
+				DirectX::SimpleMath::Vector3::Zero,
+				TACLE_ENEMY_HELATH,
+				ENEMY_POWER,
+				m_playScene->GetWordLevel(),
+				Object::ObjectType::TackleEnemy
+			)
+		);
+	}
+	//	ボス敵
+	else if (enemy == Object::ObjectType::BossEnemy)
+	{
+		m_enemys.push_back
+		(
+			EnemyFactory::CreateTackleEnemies
+			(
+				DirectX::SimpleMath::Vector3::Zero,
+				BOSS_ENEMY_HELATH,
+				ENEMY_POWER,
+				m_playScene->GetWordLevel(),
+				Object::ObjectType::BossEnemy
+			)
+		);
+	}
 }

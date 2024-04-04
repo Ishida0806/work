@@ -456,6 +456,9 @@ void Game::AddTexture()
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"EnemyHeart");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"EnemyCoverHeart");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"TutorialGuide01");
+    MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"TutorialGuide02");
+    MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"TutorialGuide03");
+    MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"TutorialGuide04");
 }
 
 /// <summary>

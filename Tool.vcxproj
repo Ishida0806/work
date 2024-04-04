@@ -285,7 +285,11 @@
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\PlayScene.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialFinishMethod.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialKillEnemyMethod.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialMovingMethod.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialSystem.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialWeponMethod.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCard.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardBackGround.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardEffect.h" />
@@ -406,7 +410,11 @@
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\PlayScene.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialFinishMethod.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialKillEnemyMethod.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialMovingMethod.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialSystem.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialWeponMethod.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCard.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardBackGround.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardEffect.cpp" />
@@ -580,6 +588,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Resources\Data\EnemyScore.json" />
+    <None Include="Resources\Data\PlayData.json" />
+    <None Include="Resources\Data\PlayerParam.json" />
+    <None Include="Resources\Data\StageWave-0.json" />
+    <None Include="Resources\Data\StageWave-1.json" />
+    <None Include="Resources\Data\StageWave-2.json" />
     <None Include="Resources\Sharders\Particle.hlsli">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <FileType>Document</FileType>

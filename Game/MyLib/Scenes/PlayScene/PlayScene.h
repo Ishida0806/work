@@ -11,13 +11,14 @@
 #include "Game/Game.h"
 #include "Common/Floor_Model.h"
 #include "Game/MyLib/Scenes/PlayScene/Object/FallingCherryBlossoms/FallingCherryBlossoms.h"
+#include "Game/MyLib/Scenes/PlayScene/TutorialSystem/TutorialSystem.h"
 #include "Game/MyLib/Scenes/PlayScene/Object/Bullet/BulletManager.h"
 #include "Game/MyLib/Scenes/PlayScene/UI/PlayerExperiencePointUI.h"
 #include "Game/MyLib/Scenes/PlayScene/Object/Enemy/EnemyManager.h"
 #include "Game/MyLib/Scenes/PlayScene/Object/Enemy/EnemyFactory.h"
+#include "Game/MyLib/Scenes/PlayScene/Object/Wall/WallFactory.h"
 #include "Game/MyLib/Scenes/PlayScene/Object/Item/ItemManager.h"
 #include "Game/MyLib/Scenes/PlayScene/Object/SkyDoem/SkyDome.h"
-#include "Game/MyLib/Scenes/PlayScene/Object/Wall/WallFactory.h"
 #include "Game/MyLib/Scenes/PlayScene/Wave/PlaySceneWave.h"
 #include "Game/MyLib/Scenes/PlayScene/Object/Wall/Wall.h"
 #include "Game/MyLib/Scenes/PlayScene/UI/PlayerHPBar.h"
@@ -58,6 +59,12 @@ public:
 	/// </summary>
 	/// <returns>レベル</returns>
 	inline int GetWordLevel()	const { return m_worldLevel; }
+
+	/// <summary>
+	/// 初回起動か？
+	/// </summary>
+	/// <returns>初回起動か</returns>
+	inline bool IsFirstOpen()	const { return m_isFirstOpen; }
 
 	//	定数
 public:
@@ -128,7 +135,7 @@ private:
 	std::vector<std::unique_ptr<HitRenderer>>			m_hitRenders;
 	//	弾ヒット時のエフェクト
 	std::vector<std::unique_ptr<HitRenderer>>			m_hitBulletRenders;
-
+	//	花吹雪
 	std::vector<std::unique_ptr<FallingCherryBlossoms>>	m_fallingCherryBlossoms;
 	//	スカイドーム
 	std::unique_ptr<SkyDome>							m_skyDome;
@@ -148,6 +155,10 @@ private:
 	std::unique_ptr<PlayPostEffect>						m_postEffect;
 	//	プレイシーンのウェーブ
 	std::unique_ptr<PlaySceneWave>						m_playSceneWave;
+	//	チュートリアル
+	std::unique_ptr<TutorialSystem>						m_tutorialSystem;
+	//	ゲーム結果
+	std::string											m_gameResultString;
 	//	フェード中の時間
 	float												m_fadeTime;
 	//	終了時間
@@ -156,12 +167,12 @@ private:
 	int													m_worldLevel;
 	//	開始のフェード中か？
 	bool												m_IsFade;
-	//	ゲーム結果
-	std::string											m_gameResultString;
 	//	終了条件
 	bool												m_isFinish;
 	//	フェードアウトのタスク
 	bool												m_isFadeOutTask;
+	//	初回起動か
+	bool												m_isFirstOpen;
 
 public:
 	//	コンストラクタ
@@ -187,7 +198,11 @@ public:
 	void ChangeSceneTitle();
 	//	マウスカーソルを見せるか
 	void ShowMouse(const bool& isShow);
+	//	チュートリアル終了
+	void FinishTutorial();
 
+
+	//	埋め込み関数
 private:
 	//	デバイス依存のリソースの初期化
 	void CreateDeviceDependentResources();
