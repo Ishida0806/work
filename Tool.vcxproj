@@ -282,9 +282,7 @@
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wall\IWallFactory.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wall\Wall.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wall\WallFactory.h" />
-    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Bat.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.h" />
-    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\PlayScene.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialFinishMethod.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialKillEnemyMethod.h" />
@@ -407,9 +405,7 @@
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\SkyDoem\SkyDome.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wall\Wall.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wall\WallFactory.cpp" />
-    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Bat.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.cpp" />
-    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\PlayScene.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialFinishMethod.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialKillEnemyMethod.cpp" />

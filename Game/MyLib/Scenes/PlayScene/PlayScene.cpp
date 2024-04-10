@@ -145,12 +145,13 @@ void PlayScene::Update(const DX::StepTimer& timer)
 	if (m_isFirstOpen) 
 	{ 
 		m_tutorialSystem->Update(timer);
-		//	途中で変わったら帰れ
+
+		//	チュートリアル中でない？
 		if (!m_isFirstOpen)		
 		{
-			//	プレイシーン
+			//	プレイシーンを再読み込み
 			m_game->GetSceneManager()->ChangeScene<PlayScene>(m_game, m_screen, GetWordLevel());
-
+			//	これ以上処理を行わない
 			return;
 		}
 	} 
@@ -169,6 +170,7 @@ void PlayScene::Update(const DX::StepTimer& timer)
 	//	ステージ4以外は終了条件が存在しているため処理を行う
 	if (stage != StageSelectScene::CHOOSE_STAGE::STAGE_4)
 	{
+		//	最終ウェーブ && チュートリアル中じゃないなら
 		if (m_playSceneWave->IsFinalWave() && m_enemyManager->GetEnemy().size() == 0 && !m_isFirstOpen)
 		{
 			//	勝った

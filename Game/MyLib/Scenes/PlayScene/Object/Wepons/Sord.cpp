@@ -20,7 +20,7 @@ const float Sord::SPHERE_RADIUS			= 0.1f;
 //	ラープの時間
 const float Sord::LERP_TIME				= 0.4f;
 //	攻撃後のクールタイム
-const float Sord::ATTACK_COOL_TIME		= 0.2f;
+const float Sord::ATTACK_COOL_TIME		= 0.8f;
 //	振り向く速度
 const float Sord::TURN_SPEED			= 0.12f;
 //	剣を振り終えて次に振れるまでの時間		

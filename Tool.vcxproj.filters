@@ -815,13 +815,7 @@
     <ClInclude Include="Game\MyLib\Scenes\TitleScene\TitleScene.h">
       <Filter>Game\MyLib\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Bat.h">
-      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
-    </ClInclude>
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.h">
-      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
-    </ClInclude>
-    <ClInclude Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.h">
       <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
     </ClInclude>
     <ClInclude Include="Game\MyLib\Camera\WinCamera.h">
@@ -1191,13 +1185,7 @@
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyLeg.cpp">
       <Filter>Game\MyLib\Scenes\PlayScene\Object\Enemy\EnemyLeg</Filter>
     </ClCompile>
-    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Bat.cpp">
-      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
-    </ClCompile>
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Sord.cpp">
-      <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
-    </ClCompile>
-    <ClCompile Include="Game\MyLib\Scenes\PlayScene\Object\Wepons\Wepon.cpp">
       <Filter>Game\MyLib\Scenes\PlayScene\Object\Wepons</Filter>
     </ClCompile>
     <ClCompile Include="Game\MyLib\Camera\WinCamera.cpp">

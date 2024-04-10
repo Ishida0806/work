@@ -13,6 +13,9 @@
 #include "TutorialWeponMethod.h"
 #include "TutorialFinishMethod.h"
 
+//	チュートリアル画像の位置
+const DirectX::SimpleMath::Vector2 TutorialSystem::TUTORIAL_TEXTURE_POSITION = DirectX::SimpleMath::Vector2(120.0f, 520.0f);
+
 /// <summary>
 /// コンストラクタ
 /// </summary>
@@ -68,7 +71,7 @@ void TutorialSystem::Render()
 	MyLib::ScreenResources::GetInstance()->GetSpriteBatch()->Draw
 	(
 		m_guideTutorialTexture,
-		DirectX::SimpleMath::Vector2(120.0f, 520.0f)
+		TUTORIAL_TEXTURE_POSITION
 	);
 }
 

@@ -11,6 +11,12 @@ class PlayScene;
 
 class TutorialSystem
 {
+	//	定数
+public:
+
+	//	チュートリアル画像の位置
+	static const DirectX::SimpleMath::Vector2 TUTORIAL_TEXTURE_POSITION;
+
 	//	列挙型
 public:
 
