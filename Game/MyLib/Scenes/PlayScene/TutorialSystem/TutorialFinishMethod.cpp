@@ -5,7 +5,7 @@
 #include "Game/MyLib/Scenes/PlayScene/PlayScene.h"
 
 //	目標終了時間
-const float TutorialFinishMethod::FINISH_TARGET_SECONDS	= 1.7f;
+const float TutorialFinishMethod::FINISH_TARGET_SECONDS	= 3.4f;
 
 /// <summary>
 /// コンストラクタ

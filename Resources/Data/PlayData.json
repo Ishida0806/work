@@ -1,3 +1,6 @@
 {
-    "FIRST_OPEN": false
+  "FIRST_OPEN"     : true,
+  "STAGE_1_CLEARED": true,
+  "STAGE_2_CLEARED": true,
+  "STAGE_3_CLEARED": true
 }

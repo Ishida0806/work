@@ -30,9 +30,24 @@ public:
 public:
 
 	//	ボスを取得する
-	inline std::vector<std::shared_ptr<Enemy>>&   GetEnemy()		noexcept { return m_enemys; };
-	//	敵を作成する
-	void CreateEnemy(const EnemyType& enemy);
+	inline std::vector<std::shared_ptr<Enemy>>&   GetEnemy()		noexcept { return m_enemys; }
+
+	/// <summary>
+	/// 敵を作成する
+	/// </summary>
+	/// <param name="enemy">敵のタイプ</param>
+	/// <param name="health">体力</param>
+	/// <param name="power">力</param>
+	/// <param name="level">レベル</param>
+	/// <param name="position">座標</param>
+	void CreateEnemy
+	(
+		const EnemyType& enemy,
+		const int& health,
+		const int& power, 
+		const int& level,
+		const DirectX::SimpleMath::Vector3& position = DirectX::SimpleMath::Vector3::Zero
+	);
 
 	//	定数
 public:

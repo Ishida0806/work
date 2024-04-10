@@ -41,7 +41,7 @@ void TutorialMovingMethod::Execute(TutorialSystem::TUTORIALSTATE* finiteStateMac
 	mousePosition.y = static_cast<float>(MyLib::InputSystem::GetInstance()->GetMouse()->GetState().y);
 
 	auto input = MyLib::InputSystem::GetInstance()->GetKeyboard()->GetState();
-
+	
 	if ((mousePosition.x != m_beforeMousePosition.x || mousePosition.y != m_beforeMousePosition.y) && (input.A || input.D || input.W || input.S))
 	{
 		//	Ÿ‚Ì‰æ‘œƒKƒCƒh‚ğİ’è‚·‚é

@@ -12,6 +12,8 @@
 
 class EdditPlayData
 {
+
+
 	//	関数
 public:
 
@@ -32,7 +34,7 @@ public:
 	/// </summary>
 	void OpenPlayData()
 	{
-		//	ファイルを開く
+		//	ファイルpath
 		std::wstring playDataFileName = L"Resources/Data/PlayData.json";
 		//	ファイルを開く
 		std::ifstream playDataFile(playDataFileName);
@@ -49,15 +51,40 @@ public:
 	bool IsClearedStage2() { return m_playData["STAGE_2_CLEARED"]; }
 	//	ステージ3はクリアしたか？
 	bool IsClearedStage3() { return m_playData["STAGE_3_CLEARED"]; }
-	//	チュートリアルをクリア
-	void CleardTutorial()  
-	{ 
-		m_playData["FIRST_OPEN"] = false; 
 
-		//	セーブ
-		std::ofstream o("Resources/Data/PlayData.json");
-		o << std::setw(4) << m_playData << std::endl;
+
+	// チュートリアルをクリア
+	void CleardTutorial()
+	{
+		m_playData["FIRST_OPEN"] = false;
+
+		// ファイルを読み取り書き込みモードで開く
+		std::fstream file("Resources/Data/PlayData.json", std::ios::in | std::ios::out | std::ios::binary);
+
+		if (file.is_open()) 
+		{
+			// JSON データを読み込む
+			nlohmann::json jsonData;
+			file >> jsonData;
+
+			// "FIRST_OPEN" の値を更新
+			jsonData["FIRST_OPEN"] = false;
+
+			// ファイルを閉じる
+			file.close();
+
+			// ファイルを書き込みモードで再度開く（内容を空にする）
+			file.open("Resources/Data/PlayData.json", std::ios::out | std::ios::trunc);
+
+			// 更新された JSON をファイルに書き込む
+			file << std::setw(4) << jsonData << std::endl;
+
+			// ファイルを閉じる
+			file.close();
+		}
 	}
+
+
 
 	//	変数
 private:

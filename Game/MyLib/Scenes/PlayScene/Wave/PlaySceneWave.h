@@ -11,6 +11,12 @@ class PlayScene;
 
 class PlaySceneWave
 {
+	//	定数
+public:
+
+	//	ウェーブの色情報
+	static const DirectX::SimpleMath::Color WAVE_COLOR;
+
 	//	アクセサ
 public:
 

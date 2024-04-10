@@ -96,8 +96,8 @@ void MyLib::ParamManager::LoadEnemyScore()
 	//	敵の通常スコア
 	m_enemyScore.normalScore = enemyData["NORMAL_ENEMY_SCORE"];
 	//	突撃の通常スコア
-	m_enemyScore.tacleScore = enemyData["TACLE_ENEMY_SCORE"];
+	m_enemyScore.tacleScore  = enemyData["TACLE_ENEMY_SCORE"];
 	//	ボスの通常スコア
-	m_enemyScore.bossScore = enemyData["BOSS_ENEMY_SCORE"];
+	m_enemyScore.bossScore	 = enemyData["BOSS_ENEMY_SCORE"];
 }
 

@@ -10,12 +10,17 @@
 #include "../PlayScene.h"
 #include "Game/MyLib/Scenes/StageSelect/StageSelectScene.h"
 
+
+	//	ウェーブの色情報
+const DirectX::SimpleMath::Color PlaySceneWave::WAVE_COLOR	= DirectX::SimpleMath::Color(1.0f, 1.0f, 1.0f, 0.7f);
+
 /// <summary>
 /// コンストラクタ
 /// </summary>
 /// <param name="playScene">プレイシーン</param>
 PlaySceneWave::PlaySceneWave(PlayScene* playScene)
-	:m_playScene(playScene),
+	:
+	m_playScene(playScene),
 	m_waveDisplayTexture(nullptr),
 	m_isFinalWave(false),
 	m_currentWave(1),
@@ -101,7 +106,7 @@ void PlaySceneWave::Draw()
 		m_waveDisplayTexture,
 		DirectX::SimpleMath::Vector2(680.0f, 68.0f),
 		nullptr,
-		DirectX::Colors::White,
+		WAVE_COLOR,
 		0.0f,
 		DirectX::SimpleMath::Vector2(74.5f, 76.0f)
 	);

@@ -25,7 +25,7 @@ TutorialKillEnemyMethod::~TutorialKillEnemyMethod()
 void TutorialKillEnemyMethod::Enter(TutorialSystem::TUTORIALSTATE* finiteStateMachine)
 {
 	//	’Êí“G‚Ìì¬
-	finiteStateMachine->GetOwner()->GetEnemyManager()->CreateEnemy(EnemyManager::EnemyType::NormalEnemy);
+	finiteStateMachine->GetOwner()->GetEnemyManager()->CreateEnemy(EnemyManager::EnemyType::NormalEnemy, 4, 1, 1);
 }
 
 /// <summary>

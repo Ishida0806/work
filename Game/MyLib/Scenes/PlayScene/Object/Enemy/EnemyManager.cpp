@@ -440,12 +440,15 @@ void EnemyManager::SelectSpawnEnemy()
 	m_playSceneWave->DeleteSpawnedEnemyData();
 }
 
-
 /// <summary>
 /// “G‚ğì¬‚·‚é
 /// </summary>
-/// <param name="enemy">“G</param>
-void EnemyManager::CreateEnemy(const EnemyType& enemy)
+/// <param name="enemy">“G‚Ìƒ^ƒCƒv</param>
+/// <param name="health">‘Ì—Í</param>
+/// <param name="power">—Í</param>
+/// <param name="level">ƒŒƒxƒ‹</param>
+/// <param name="position">À•W</param>
+void EnemyManager::CreateEnemy(const EnemyType& enemy, const int& health, const int& power, const int& level, const DirectX::SimpleMath::Vector3& position)
 {
 	//	’Êí“G
 	if (enemy == EnemyType::NormalEnemy)
@@ -454,10 +457,10 @@ void EnemyManager::CreateEnemy(const EnemyType& enemy)
 		(
 			EnemyFactory::CreateNormalEnemies
 			(
-				DirectX::SimpleMath::Vector3::Zero,
-				NORMAL_ENEMY_HELATH,
-				ENEMY_POWER,
-				m_playScene->GetWordLevel(),
+				position,
+				health,
+				power,
+				level,
 				Object::ObjectType::NormalEnemy
 			)
 		);
@@ -469,10 +472,10 @@ void EnemyManager::CreateEnemy(const EnemyType& enemy)
 		(
 			EnemyFactory::CreateTackleEnemies
 			(
-				DirectX::SimpleMath::Vector3::Zero,
-				TACLE_ENEMY_HELATH,
-				ENEMY_POWER,
-				m_playScene->GetWordLevel(),
+				position,
+				health,
+				power,
+				level,
 				Object::ObjectType::TackleEnemy
 			)
 		);
@@ -484,10 +487,10 @@ void EnemyManager::CreateEnemy(const EnemyType& enemy)
 		(
 			EnemyFactory::CreateTackleEnemies
 			(
-				DirectX::SimpleMath::Vector3::Zero,
-				BOSS_ENEMY_HELATH,
-				ENEMY_POWER,
-				m_playScene->GetWordLevel(),
+				position,
+				health,
+				power,
+				level,
 				Object::ObjectType::BossEnemy
 			)
 		);

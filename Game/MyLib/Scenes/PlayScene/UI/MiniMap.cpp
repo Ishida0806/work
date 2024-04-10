@@ -97,7 +97,7 @@ void MiniMap::Draw()
 		MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"map"),
 		m_mapPosition,
 		nullptr,
-		DirectX::Colors::White,
+		DirectX::SimpleMath::Color(1.0f, 1.0f, 1.0f, 0.5), 
 		0.0f,
 		MAP_ORIGIN_POSITION
 	);

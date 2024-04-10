@@ -183,7 +183,7 @@ void PlayScene::Update(const DX::StepTimer& timer)
 			AudioManager::GetInstance()->PlaySoundEffectSE(L"PlayWinBGM");
 		}
 	}
-	//	サイズが0じゃないなら
+	//	サイズが0じゃないなら && チュートリアル中じゃないなら
 	if (m_gameResultString.size() && !m_isFirstOpen)
 	{
 		//	ゲームの勝敗をプレイヤーに教える
@@ -620,7 +620,7 @@ void PlayScene::UIRender()
 	//	ポストエフェクトの描画
 	if(!m_isFinish)	m_postEffect->Draw();
 	//	ウェーブ数の描画
-	m_playSceneWave->Draw();
+	if (!m_isFirstOpen) m_playSceneWave->Draw();
 	//	プレイヤーの体力バーUIを描画する
 	m_playerBarUI->Draw();
 	//	プレイヤーのUIを描画する

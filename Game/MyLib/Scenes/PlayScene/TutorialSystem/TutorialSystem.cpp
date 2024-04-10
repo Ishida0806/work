@@ -68,7 +68,7 @@ void TutorialSystem::Render()
 	MyLib::ScreenResources::GetInstance()->GetSpriteBatch()->Draw
 	(
 		m_guideTutorialTexture,
-		DirectX::SimpleMath::Vector2(150.0f, 500.0f)
+		DirectX::SimpleMath::Vector2(120.0f, 520.0f)
 	);
 }
 
