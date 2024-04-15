@@ -13,14 +13,19 @@
 #include "Game/MyLib/Scenes/PlayScene/Object/Enemy/Enemy.h"
 #include "Game/MyLib/Scenes/PlayScene/PlayScene.h"
 
+//	ƒ{ƒX“G‚Ìƒ^ƒŒƒbƒgæ
+const DirectX::SimpleMath::Vector3 BulletManager::BOSS_TURRET_END	= DirectX::SimpleMath::Vector3(0.0f,0.0f, 3.0f);
+//	’Êí“G‚Ìƒ^ƒŒƒbƒgæ
+const DirectX::SimpleMath::Vector3 BulletManager::NORMAL_TURRET_END = DirectX::SimpleMath::Vector3(0.0f, 0.0f, 1.0f);;
 //	“G‚Ì’e‚ÌUŒ‚—Í
-const int BulletManager::ENEMY_BULLET_POWER   = 3;
+const int						   BulletManager::ENEMY_BULLET_POWER   = 3;
 //	ƒ{ƒX‚Ì’e‚ÌUŒ‚—Í
-const int BulletManager::BOSS_BULLET_POWER	  = 9;
+const int						   BulletManager::BOSS_BULLET_POWER	  = 9;
 //	ƒ{ƒX’e‚Ì‘å‚«‚³
-const float BulletManager::BOSS_BULLET_SCLAE  = 0.7f;
+const float						   BulletManager::BOSS_BULLET_SCLAE  = 0.7f;
 //	’Êí“G‚Ì’e‚Ì‘å‚«‚³
-const float BulletManager::ENEMY_BULLET_SCLAE = 0.6f;
+const float						   BulletManager::ENEMY_BULLET_SCLAE = 0.6f;
+
 
 
 /// <summary>
@@ -152,7 +157,7 @@ void BulletManager::ShotEnemyBullets()
 			//	–C’e‚ğ”ò’e‚³‚¹‚é
 			bullet->SetUsed(true);
 			//	–C’e‚ª”­Ë‚³‚ê‚éˆÊ’u‚ğŒvZ‚·‚é 
-			DirectX::SimpleMath::Vector3 offsetPos = DirectX::SimpleMath::Vector3::Transform(DirectX::SimpleMath::Vector3(0.0f, 0.0f, 1.f), enemy->GetRotate());
+			DirectX::SimpleMath::Vector3 offsetPos = DirectX::SimpleMath::Vector3::Transform(NORMAL_TURRET_END, enemy->GetRotate());
 			//	”­ËˆÊ’u‚ğİ’è‚·‚é
 			bullet->SetPosition(enemy->GetPosition() - offsetPos);
 			//	Šp“x‚ª‚¸‚ê‚Ä‚é‚½‚ß•â³
@@ -193,7 +198,7 @@ void BulletManager::ShotBossBullets()
 			//	Šp“x‚ª‚¸‚ê‚Ä‚é‚½‚ß•â³
 			DirectX::SimpleMath::Quaternion OffsetRotate = DirectX::SimpleMath::Quaternion::CreateFromAxisAngle(DirectX::SimpleMath::Vector3::UnitY, DirectX::XMConvertToRadians(90.0f)) * enemy->GetRotate();
 			//	–C’e‚ª”­Ë‚³‚ê‚éˆÊ’u‚ğŒvZ‚·‚é 
-			DirectX::SimpleMath::Vector3 offsetPos = DirectX::SimpleMath::Vector3::Transform(DirectX::SimpleMath::Vector3(0.0f, 0.0f, 3.f), OffsetRotate);
+			DirectX::SimpleMath::Vector3 offsetPos = DirectX::SimpleMath::Vector3::Transform(BOSS_TURRET_END, OffsetRotate);
 			//	”­ËˆÊ’u‚ğİ’è‚·‚é
 			bullet->SetPosition(enemy->GetPosition() + offsetPos);
 			//  ”­ËŠp‚ğİ’è‚·‚é

@@ -19,6 +19,10 @@ public:
 	//	定数
 public:
 
+	//	ボス敵のタレット先
+	static const DirectX::SimpleMath::Vector3 BOSS_TURRET_END;
+	//	通常敵のタレット先
+	static const DirectX::SimpleMath::Vector3 NORMAL_TURRET_END;
 	//	敵の弾の力					 
 	static const int						  ENEMY_BULLET_POWER;
 	//	ボスの弾の力
