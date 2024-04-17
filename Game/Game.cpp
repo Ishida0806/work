@@ -322,7 +322,7 @@ void Game::CreateProjection()
 /// </summary>
 void Game::CreateScene()
 {
-   //m_sceneManager->ChangeScene<TitleScene>(this);
+   m_sceneManager->ChangeScene<TitleScene>(this);
    //m_sceneManager->ChangeScene<StageSelectScene>(this);
    m_sceneManager->ChangeScene<PlayScene>(this, m_screens);
    //m_sceneManager->ChangeScene<ResultScene>(this);
