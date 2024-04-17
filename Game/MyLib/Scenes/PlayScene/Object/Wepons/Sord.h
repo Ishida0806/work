@@ -17,6 +17,8 @@ public:
 	inline Collision::Shape::Capsule GetWeponCapsule() const { return m_sordCapusel; }
 	//	攻撃中
 	inline bool IsAttack()							   const { return m_isAttack; }
+	//	攻撃クールタイムの取得
+	inline float GetAttackCoolTime()				   const { return m_attackCoolTime; }
 
 	//	定数
 public:

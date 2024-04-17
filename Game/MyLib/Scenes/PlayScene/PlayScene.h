@@ -26,6 +26,7 @@
 #include "Game/MyLib/Scenes/PlayScene/Object/Player.h"
 #include "Game/MyLib/Scenes/PlayScene/UI/PlayeScore.h"
 #include "Game/MyLib/Scenes/PlayScene/UI/LevelCard.h"
+#include "Game/MyLib/Scenes/PlayScene/UI/BatMeter.h"
 #include "Game/MyLib/Scenes/PlayScene/UI/PlayerUI.h"
 #include "Game/MyLib/Scenes/PlayScene/UI/MiniMap.h"
 #include "Game/MyLib/GameDatas/BulletHitParticle.h"
@@ -157,6 +158,8 @@ private:
 	std::unique_ptr<PlaySceneWave>						m_playSceneWave;
 	//	チュートリアル
 	std::unique_ptr<TutorialSystem>						m_tutorialSystem;
+	//	バッドメーター
+	std::unique_ptr<BatMeter>							m_batMeter;
 	//	ゲーム結果
 	std::string											m_gameResultString;
 	//	フェード中の時間

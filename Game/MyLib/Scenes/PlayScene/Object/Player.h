@@ -35,6 +35,8 @@ public:
 	inline bool								 IsWinAnimation()			const { return m_isWinAnimation; }
 	//	キャラクターの球の当たり判定
 	inline Collision::Shape::Sphere			 GetSphere()				const { return m_playerSphere; }
+	//	ソードの取得
+	inline Sord*							 GetSord()					const { return m_sord.get(); }
 	//	剣のカプセルの当たり判定
 	inline Collision::Shape::Capsule		 GetSordCapuselColision()	const { return m_sord->GetWeponCapsule(); }
 	//	剣の座標

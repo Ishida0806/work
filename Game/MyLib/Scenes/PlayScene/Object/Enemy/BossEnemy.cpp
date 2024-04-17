@@ -22,10 +22,6 @@ const int						BossEnemy::BOSS_BULLETS_NUM	= 50;
 const int						BossEnemy::BOSS_EXP			= 30;
 //	球を打つまでのカウント
 const float						BossEnemy::SHOT_TIME		= 0.71f;
-//	最初に与えられる力
-const int						BossEnemy::FIRST_POWER		= 1;
-//	初期設定の体力
-const int						BossEnemy::FIRST_HEALTH		= 30;
 //	影の大きさ
 const float						BossEnemy::SHADOW_SCALE		= 7.2f;
 //	死亡アニメーションの際に引く値

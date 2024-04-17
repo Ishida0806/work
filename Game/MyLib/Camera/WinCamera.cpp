@@ -94,7 +94,6 @@ void WinCamera::Execute(Camera::CAMERASTATE* finiteStateMachine, const DX::StepT
     //  カメラをプレイヤーにどアップさせる
 	target.z = target.z - 7.0f;
 	target.y = target.y - 16.0f;
-	target.x = target.x - 0.0f;
 
 	//	ターゲットの追従
 	camera->SetTargetPosition(DirectX::SimpleMath::Vector3::Lerp(camera->GetTargetPosition(), target, TARGET_RATE));

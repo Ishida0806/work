@@ -20,10 +20,6 @@ public:
 	static const float										 WALL_PLACE;
 	//	発射のインターバル
 	static const float										 SHOT_TIME;
-	//	最初の力
-	static const int										 FIRST_POWER;
-	//	初期設定の体力
-	static const int										 FIRST_HEALTH;
 	//	ボスの経験値
 	static const int										 BOSS_EXP;
 	//	影の大きさ

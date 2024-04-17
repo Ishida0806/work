@@ -459,6 +459,8 @@ void Game::AddTexture()
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"TutorialGuide02");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"TutorialGuide03");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"TutorialGuide04");
+    MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"BatMeter");
+    MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"BatSide");
 }
 
 /// <summary>

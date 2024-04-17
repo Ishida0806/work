@@ -141,6 +141,8 @@ void PlayScene::Update(const DX::StepTimer& timer)
 	m_colisionObjects->UpdateColision();
 	//	ミニマップを更新する
 	UpdateMiniMap(timer);
+	//	バットメーターの描画
+	m_batMeter->Update(timer);
 	//	チュートリアル中か？ && 	プレイシーンのウェーブの更新する
 	if (m_isFirstOpen) 
 	{ 
@@ -373,6 +375,12 @@ void PlayScene::CreateDeviceDependentResources()
 	AudioManager::GetInstance()->PlaySoundEffectBGM(L"PlayGameBgm01");
 	//	エフェクトの入場処理の開始
 	m_game->GetChangeEffect()->RequestChangeEffect(ChangeEffect::ChangeSceneType::Play, ChangeEffect::ChangeSceneFadeType::To);
+	//	バッドメーターの作成
+	m_batMeter = std::make_unique<BatMeter>();
+	//	バッドメーターの初期化
+	m_batMeter->Initialize();
+	//	ソードの取得する
+	m_batMeter->SetSord(m_player->GetSord());
 	//	マウス
 	ShowMouse(true);
 	//	一応からにしておく
@@ -641,6 +649,8 @@ void PlayScene::UIRender()
 	if (m_pause->IsPause())	m_pause->Render();
 	//	チュートリアルの描画
 	if(m_isFirstOpen)		m_tutorialSystem->Render();
+	//	バットメーターの描画
+	m_batMeter->Draw();
 	//	描画を終了する
 	m_screen->GetSpriteBatch()->End();
 }

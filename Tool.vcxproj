@@ -289,6 +289,7 @@
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialMovingMethod.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialSystem.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialWeponMethod.h" />
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\BatMeter.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCard.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardBackGround.h" />
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardEffect.h" />
@@ -412,6 +413,7 @@
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialMovingMethod.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialSystem.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialWeponMethod.cpp" />
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\BatMeter.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCard.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardBackGround.cpp" />
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\LevelCardEffect.cpp" />

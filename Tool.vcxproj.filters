@@ -422,6 +422,9 @@
     <Filter Include="JsonData">
       <UniqueIdentifier>{25da2aa5-16b4-4d06-853b-c83e6c3ded83}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\MyLib\Scenes\PlayScene\UI\BatMeter">
+      <UniqueIdentifier>{de71b21d-cd69-4a80-a558-1192230026cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -860,6 +863,9 @@
     <ClInclude Include="Game\MyLib\GameDatas\EdditPlayData.h">
       <Filter>Game\MyLib\GameDatas</Filter>
     </ClInclude>
+    <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\BatMeter.h">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\BatMeter</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -1217,6 +1223,9 @@
     </ClCompile>
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\TutorialSystem\TutorialFinishMethod.cpp">
       <Filter>Game\MyLib\Scenes\PlayScene\TutorialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\BatMeter.cpp">
+      <Filter>Game\MyLib\Scenes\PlayScene\UI\BatMeter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
