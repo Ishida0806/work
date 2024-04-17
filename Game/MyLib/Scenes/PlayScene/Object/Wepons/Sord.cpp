@@ -18,7 +18,9 @@ const float Sord::SWING_SPEED			= 0.34f;
 //	球の半径
 const float Sord::SPHERE_RADIUS			= 0.1f;
 //	ラープの時間
-const float Sord::LERP_TIME				= 0.4f;
+const float Sord::ATTACK_TIME			= 0.4f;
+//	攻撃後の時間		
+const float Sord::ATTACK_AFTER_TIME		= 0.042f;
 //	攻撃後のクールタイム
 const float Sord::ATTACK_COOL_TIME		= 0.8f;
 //	振り向く速度
@@ -228,7 +230,15 @@ void Sord::Attack(const DX::StepTimer& timer)
 void Sord::AttackLerp()
 {
 	DirectX::SimpleMath::Quaternion slashRotate = DirectX::SimpleMath::Quaternion::CreateFromAxisAngle(DirectX::SimpleMath::Vector3::UnitX, DirectX::XMConvertToRadians(m_slashAngle));
-	m_slashRotate								= DirectX::SimpleMath::Quaternion::Lerp(m_slashRotate, slashRotate, LERP_TIME);
+
+	if (m_isAttackCoolTime)
+	{
+		m_slashRotate = DirectX::SimpleMath::Quaternion::Lerp(m_slashRotate, slashRotate, ATTACK_AFTER_TIME);
+	}
+	else
+	{
+		m_slashRotate = DirectX::SimpleMath::Quaternion::Lerp(m_slashRotate, slashRotate, ATTACK_TIME);
+	}
 }
 
 /// <summary>

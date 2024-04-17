@@ -43,8 +43,10 @@ public:
 	static const float						  TURN_SPEED;
 	//	球の半径
 	static const float						  SPHERE_RADIUS;
-	//	ラープの時間					  
-	static const float						  LERP_TIME;
+	//	攻撃の時間					  
+	static const float						  ATTACK_TIME;
+	//	攻撃後の時間					  
+	static const float						  ATTACK_AFTER_TIME;
 	//	攻撃後のクールタイム
 	static const float						  ATTACK_COOL_TIME;
 	//	剣の地面の位置
