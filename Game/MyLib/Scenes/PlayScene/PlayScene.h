@@ -158,8 +158,6 @@ private:
 	std::unique_ptr<PlaySceneWave>						m_playSceneWave;
 	//	チュートリアル
 	std::unique_ptr<TutorialSystem>						m_tutorialSystem;
-	//	バッドメーター
-	std::unique_ptr<BatMeter>							m_batMeter;
 	//	ゲーム結果
 	std::string											m_gameResultString;
 	//	フェード中の時間
