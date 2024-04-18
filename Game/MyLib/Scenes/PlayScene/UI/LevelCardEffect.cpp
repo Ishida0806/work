@@ -10,9 +10,11 @@ const DirectX::SimpleMath::Vector2 LevelCardEffect::CARD_ORIGIN_POSITION	  = { 1
 //	カードの座標
 const DirectX::SimpleMath::Vector2 LevelCardEffect::CARD_POSITION			  = { 250.0f,350.0f };
 //	マウスカーソル接触後のスケール
-const DirectX::SimpleMath::Vector2 LevelCardEffect::CARD_SCALE			  = { 1.3f,1.3f };
+const DirectX::SimpleMath::Vector2 LevelCardEffect::CARD_SCALE				  = { 1.3f,1.3f };
 //	カードのずらす座標
-const float						LevelCardEffect::OFFSET_POSITION		  = 400.0f;
+const float						   LevelCardEffect::OFFSET_POSITION			  = 400.0f;
+//	カードの軸座標
+const float						   LevelCardEffect::CARD_AXIS_POSITION		  = 1200.0f;
 
 /// <summary>
 /// コンストラクタ
@@ -20,7 +22,8 @@ const float						LevelCardEffect::OFFSET_POSITION		  = 400.0f;
 /// <param name="player">プレイヤー</param>
 /// <param name="type">タイプ/param>
 LevelCardEffect::LevelCardEffect(Player* player, const int& type)
-	:m_player(player),
+	:
+	m_player(player),
 	m_type(type),
 	m_texture(nullptr),
 	m_clickAble(false),
@@ -51,9 +54,6 @@ void LevelCardEffect::Initialize()
 	case LevelCard::CardType::SpeedUP:		m_texture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"SpeedUPCard");  break;
 	default:																														 break;
 	}
-
-	//	座標をずらす
-	m_targetPosition = DirectX::SimpleMath::Vector2(CARD_POSITION.x + (OFFSET_POSITION * static_cast<float>(m_type)), CARD_POSITION.y);
 
 	//	座標を指定地に
 	ResetPosition();
@@ -217,9 +217,16 @@ void LevelCardEffect::Click()
 void LevelCardEffect::ResetPosition()
 {
 	//	X座標はずらしたままで
-	m_position.x = m_targetPosition.x;
-	//	Y座標を上にする
-	m_position.y = -OFFSET_POSITION;
+	int weight, height;
+
+	//	画面サイズを取得
+	MyLib::ScreenResources::GetInstance()->GetScreenSize(weight, height);
+
+	//	画面の真ん中に表示
+	m_position.x = static_cast<float>(weight) / 2.0f;
+
+	//	Y座標を設定する
+	m_position.y = CARD_AXIS_POSITION;
 }
 
 /// <summary>
@@ -247,4 +254,13 @@ void LevelCardEffect::SetClick()
 
 	m_isReady   = true;
 	m_clickAble = false;
+}
+
+/// <summary>
+/// ターゲット座標の設定
+/// </summary>
+/// <param name="targetPosition">ターゲット座標</param>
+void LevelCardEffect::SetTargetPosition(const DirectX::SimpleMath::Vector2 targetPosition)
+{
+	m_targetPosition = targetPosition;
 }
