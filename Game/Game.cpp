@@ -451,6 +451,7 @@ void Game::AddTexture()
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"PowerUPCard");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"HealthUPCard");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"SpeedUPCard");
+    MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"SwingSpeedUPCard");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"leverUpCardBackGround");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"EXPmax");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"ColourlessBoard");

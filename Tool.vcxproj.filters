@@ -425,6 +425,9 @@
     <Filter Include="Game\MyLib\Scenes\PlayScene\UI\BatMeter">
       <UniqueIdentifier>{de71b21d-cd69-4a80-a558-1192230026cb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\MyLib\GameDatas\PlayPostEffect\PlayerSwingSpeedEffect">
+      <UniqueIdentifier>{f936126c-ef24-4ddc-9e45-5b3d3df86cc3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -866,6 +869,9 @@
     <ClInclude Include="Game\MyLib\Scenes\PlayScene\UI\BatMeter.h">
       <Filter>Game\MyLib\Scenes\PlayScene\UI\BatMeter</Filter>
     </ClInclude>
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerSwingSpeedEffect.h">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerSwingSpeedEffect</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -1226,6 +1232,9 @@
     </ClCompile>
     <ClCompile Include="Game\MyLib\Scenes\PlayScene\UI\BatMeter.cpp">
       <Filter>Game\MyLib\Scenes\PlayScene\UI\BatMeter</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerSwingSpeedEffect.cpp">
+      <Filter>Game\MyLib\GameDatas\PlayPostEffect\PlayerSwingSpeedEffect</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

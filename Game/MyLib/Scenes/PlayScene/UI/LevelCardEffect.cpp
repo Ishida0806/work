@@ -49,10 +49,11 @@ void LevelCardEffect::Initialize()
 	//	タイプごとにカード入れる
 	switch (type)
 	{
-	case LevelCard::CardType::PowerUP:		m_texture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"PowerUPCard");	 break;
-	case LevelCard::CardType::HealthUP:		m_texture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"HealthUPCard"); break;
-	case LevelCard::CardType::SpeedUP:		m_texture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"SpeedUPCard");  break;
-	default:																														 break;
+	case LevelCard::CardType::PowerUP:		m_texture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"PowerUPCard");		  break;
+	case LevelCard::CardType::HealthUP:		m_texture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"HealthUPCard");	  break;
+	case LevelCard::CardType::SpeedUP:		m_texture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"SpeedUPCard");		  break;
+	case LevelCard::CardType::SwingSpeedUP:	m_texture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"SwingSpeedUPCard");  break;
+	default:																															  break;
 	}
 
 	//	座標を指定地に
@@ -156,8 +157,7 @@ bool LevelCardEffect::InMouseCarsor(const DirectX::SimpleMath::Vector2& mousePos
 		)
 	{	
 		//	最初だけ音を鳴らす
-		if(!m_clickAble)
-			AudioManager::GetInstance()->PlaySoundEffectSE(L"inCard");
+		if(!m_clickAble)	AudioManager::GetInstance()->PlaySoundEffectSE(L"inCard");
 
 		m_clickAble = true;
 
@@ -203,6 +203,15 @@ void LevelCardEffect::Click()
 		//	プレイヤーの速度を上げる
 		m_player->UpSpeed();	 
 		break;
+
+	case LevelCard::CardType::SwingSpeedUP:
+		//	音を鳴らす
+		AudioManager::GetInstance()->PlaySoundEffectSE(L"speedCardUP");
+		//	振る速度を上げる
+		m_player->UpSwingSpeed();
+
+		break;
+
 	default:													 break;
 	}
 

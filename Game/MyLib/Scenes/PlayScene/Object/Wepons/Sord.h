@@ -19,6 +19,8 @@ public:
 	inline bool IsAttack()							   const { return m_isAttack; }
 	//	攻撃クールタイムの取得
 	inline float GetAttackCoolTime()				   const { return m_attackCoolTime; }
+	//	振る速度の上がる
+	void UpSwingSpeed();
 
 	//	定数
 public:
@@ -39,6 +41,8 @@ public:
 	static const float						  SWING_ANGLE;
 	//	振る速度
 	static const float						  SWING_SPEED;
+	//	レベルアップ時の上がる速度
+	static const float						  SWING_SPEED_UP_VALUE;
 	//	振り向く速度
 	static const float						  TURN_SPEED;
 	//	球の半径
@@ -77,6 +81,8 @@ private:
 	float							m_attackTime;
 	//	攻撃後のクールタイム
 	float							m_attackCoolTime;
+	//	攻撃後のクールタイムを短くする
+	float							m_shortAttackTime;
 	//	攻撃フラグ
 	bool							m_isAttack;
 	//	攻撃後のクールタイム中か

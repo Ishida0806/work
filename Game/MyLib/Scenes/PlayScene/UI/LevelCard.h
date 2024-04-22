@@ -25,11 +25,12 @@ public:
 	//	カードのタイプ
 	enum class CardType
 	{
-		PowerUP	= 0,
-		HealthUP	= 1,
-		SpeedUP	= 2,
+		PowerUP			= 0,
+		HealthUP		= 1,
+		SpeedUP			= 2,
+		SwingSpeedUP	= 3,
 
-		OverID = 3
+		OverID = 4
 	};
 
 	//	変数

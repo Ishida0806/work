@@ -221,6 +221,7 @@
     <ClInclude Include="Game\MyLib\GameDatas\PlayerPowerffect.h" />
     <ClInclude Include="Game\MyLib\GameDatas\PlayerSpeedEffect.h" />
     <ClInclude Include="Game\MyLib\GameDatas\PlayerStatus.h" />
+    <ClInclude Include="Game\MyLib\GameDatas\PlayerSwingSpeedEffect.h" />
     <ClInclude Include="Game\MyLib\GameDatas\PlayInfo.h" />
     <ClInclude Include="Game\MyLib\GameDatas\PlayPostEffect.h" />
     <ClInclude Include="Game\MyLib\GameDatas\PostEffect.h" />
@@ -361,6 +362,7 @@
     <ClCompile Include="Game\MyLib\GameDatas\PlayerPowerffect.cpp" />
     <ClCompile Include="Game\MyLib\GameDatas\PlayerSpeedEffect.cpp" />
     <ClCompile Include="Game\MyLib\GameDatas\PlayerStatus.cpp" />
+    <ClCompile Include="Game\MyLib\GameDatas\PlayerSwingSpeedEffect.cpp" />
     <ClCompile Include="Game\MyLib\GameDatas\PlayInfo.cpp" />
     <ClCompile Include="Game\MyLib\GameDatas\PlayPostEffect.cpp" />
     <ClCompile Include="Game\MyLib\GameDatas\ResourcesData.cpp" />
