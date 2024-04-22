@@ -18,7 +18,8 @@ const float						   LevelCardBackGround::EXIT_SPEED					  = 0.1f;
 /// </summary>
 /// <param name="player">ÉvÉåÉCÉÑÅ[</param>
 LevelCardBackGround::LevelCardBackGround()
-	:m_isClick(false),
+	:
+	m_isClick(false),
 	m_backGroundTexture(nullptr)
 {
 }

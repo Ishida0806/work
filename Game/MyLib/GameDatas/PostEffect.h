@@ -17,7 +17,8 @@ public:
 		PowerUP = 1,
 		HealthUP = 2,
 		SpeedUP = 3,
-		PlayerHPCrisis = 4,
+		SwingSpeedUP = 4,
+		PlayerHPCrisis = 5,
 
 		OverID
 	};

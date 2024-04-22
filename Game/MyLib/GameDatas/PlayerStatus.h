@@ -5,6 +5,7 @@
 //
 #pragma once
 #include "Game/MyLib/Scenes/PlayScene/Object/PlayerExperiencePoint/PlayerExperiencePoint.h"
+#include "Game/MyLib/GameDatas/PostEffect.h"
 
 class PlayerStatus 
 {
@@ -29,6 +30,8 @@ public:
 	bool							 ChooseSpeedUP()			const { return m_speedUP; }
 	//	体力UPを選んだ？
 	bool							 ChooseHealthUP()			const { return m_healthUP; }
+	//	振る速度UPを選んだ？
+	bool							 ChooseSwingSpeedUP()		const { return m_swingSpeedUP; }
 	//	ダメージを受けたか？
 	bool							 IsDamege()					const { return m_isDamege; }
 	//	無敵時間か？
@@ -41,12 +44,16 @@ public:
 	void SetDamegeCondition(const bool& flag);
 	//	ダメージを設定する
 	void SetDamege(const int& damege);
+	//	セレクトした対象を増やした
+	void SelectedUpStatus(const PostEffect::PostEffectType& effectType);
 	//	体力を増やす
 	void UpMaxHP();
 	//	速度を増やす
 	void UpSpeed();
 	//	力が上がる
 	void UpPower();
+	//	剣の振る速度
+	void UpSwingSpeed();
 	//	レベルが上がった！
 	void UpLevel();
 
@@ -97,10 +104,12 @@ private:
 	bool											 m_isRecovery;
 	//	パワーアップ中
 	bool											 m_isPowerUP;
-	//	速度が上がった！
+	//	体力が上がった！
 	bool											 m_healthUP;
-	//	体力がが上がった！
+	//	速度が上がった！
 	bool											 m_speedUP;
+	//	振る速度が上がった！
+	bool											 m_swingSpeedUP;
 	//	力がが上がった！
 	bool											 m_powerUP;
 	//	ダメージを受けた！	
@@ -131,8 +140,6 @@ private:
 	void Recovery(const DX::StepTimer& timer);
 	//	パワーアップ状態の制限を確認する
 	void CheckPowerUP(const DX::StepTimer& timer);
-	//	レベルアップしたフラグを元に戻す
-	void CheckLevelUP();
 	//	無敵かどうか確認する
 	void CheckInvincibility(const DX::StepTimer& timer);
 };

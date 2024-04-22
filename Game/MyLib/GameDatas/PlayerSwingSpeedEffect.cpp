@@ -1,36 +1,37 @@
 //
-//		File Name ： PlayerPowerEffect.cpp
+//		File Name ： PlayerSwingSpeedEffect.cpp
 //		Production： 2023/1/10
 //		Author　　： 石田 恭一	
 //
 #include "pch.h"
-#include "PlayerPowerffect.h"
+#include "PlayerSwingSpeedEffect.h"
 
 
 //	タイマーの加速
-const float						   PlayerPowerEffect::TIMER_SPEED				= 7.0f;
+const float						   PlayerSwingSpeedEffect::TIMER_SPEED				= 7.0f;
 //	ポストエフェクトの真ん中
-const DirectX::SimpleMath::Vector2 PlayerPowerEffect::CRISIS_ORIGIN_POSITION	= DirectX::SimpleMath::Vector2(762.5f, 427.5);
+const DirectX::SimpleMath::Vector2 PlayerSwingSpeedEffect::CRISIS_ORIGIN_POSITION	= DirectX::SimpleMath::Vector2(762.5f, 427.5);
 
 /// <summary>
 /// コンストラクタ
 /// </summary>
-PlayerPowerEffect::PlayerPowerEffect()
-	:PostEffect(PostEffect::PostEffectType::PowerUP)
+PlayerSwingSpeedEffect::PlayerSwingSpeedEffect()
+	:
+	PostEffect(PostEffect::PostEffectType::SwingSpeedUP)
 {
 }
 
 /// <summary>
 /// デストラクタ
 /// </summary>
-PlayerPowerEffect::~PlayerPowerEffect()
+PlayerSwingSpeedEffect::~PlayerSwingSpeedEffect()
 {
 }
 
 /// <summary>
 /// 初期化処理
 /// </summary>
-void PlayerPowerEffect::Initialize()
+void PlayerSwingSpeedEffect::Initialize()
 {
 	m_texture = MyLib::ResourcesData::GetInstance()->GatShaderResourceView(L"ColourlessBoard");
 }
@@ -39,26 +40,27 @@ void PlayerPowerEffect::Initialize()
 /// 更新処理
 /// </summary>
 /// <param name="timer">タイマー</param>
-void PlayerPowerEffect::Update(const DX::StepTimer& timer)
+void PlayerSwingSpeedEffect::Update(const DX::StepTimer& timer)
 {
 	PostEffect::Update(timer);
 
 	DirectX::SimpleMath::Color color = GetColor();
-	//	増やしたり減らしたり
+
 	color.x = sinf(GetElapsedTime() * TIMER_SPEED);
-	//	アルファ値は固定
+	color.y = sinf(GetElapsedTime() * TIMER_SPEED);
+
 	color.w = 0.0f;
-	//	カラーの上限値を決める
-	color.x = Utility::Clamp(color.x, 0.0f, 0.6f);
+	
+	color.x = Utility::Clamp(color.x, 0.0f, 0.4f);
+	color.y = Utility::Clamp(color.y, 0.0f, 0.4f);
 
 	SetLerpColor(color);
-
 }
 
 /// <summary>
 /// 描画処理
 /// </summary>
-void PlayerPowerEffect::Draw()
+void PlayerSwingSpeedEffect::Draw()
 {
 	//	スプライトバッチ
 	DirectX::SpriteBatch* spriteBatch = MyLib::ScreenResources::GetInstance()->GetSpriteBatch();

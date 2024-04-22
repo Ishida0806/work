@@ -14,6 +14,8 @@ public:
 	inline bool IsReady()		const { return m_isReady; }
 	//	クリックが押された
 	void SetClick();
+	//	ターゲット座標の設定
+	void SetTargetPosition(const DirectX::SimpleMath::Vector2 targetPosition);
 
 	//	定数
 public:
@@ -26,6 +28,8 @@ public:
 	static const DirectX::SimpleMath::Vector2 CARD_SCALE;
 	//	カードのずらす座標	
 	static const float						  OFFSET_POSITION;
+	//	カードの軸座標
+	static const float						  CARD_AXIS_POSITION;
 
 	//	変数
 private:

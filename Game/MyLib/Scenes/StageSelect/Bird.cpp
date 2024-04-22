@@ -149,9 +149,6 @@ void Bird::GettingStartedBird()
 /// </summary>
 void Bird::RandomDiretion()
 {
-	//	—”‚Ì‰Šú‰»
-	srand((unsigned int)time(NULL));
-
 	//	ƒ‰ƒ“ƒ_ƒ€‚Å‚Ç‚¿‚ç‚©‚çn‚ß‚é‚©Œˆ‚ß‚é
 	if (rand() % 2 == 0)
 	{
