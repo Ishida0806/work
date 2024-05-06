@@ -20,9 +20,9 @@ const float PlayPostEffect::RENDER_EFFECT_TIME = 0.82f;
 /// <param name="playerHPBar">体力バー</param>
 /// <param name="player">プレイヤー</param>
 PlayPostEffect::PlayPostEffect(PlayerHPBar* playerHPBar, Player* player)
-	:m_playerHPBar(playerHPBar),
+	:
+    m_playerHPBar(playerHPBar),
 	m_player(player),
-	m_elapsedTime(0.0f),
     m_healthUpEffectRenderTime(0.0f),
 	m_swingSpeedEffectRenderTime(0.0f),
 	m_speedUpEffectRenderTime(0.0f),
@@ -64,9 +64,6 @@ void PlayPostEffect::Initialize()
 /// <param name="timer">タイマー</param>
 void PlayPostEffect::Update(const DX::StepTimer& timer)
 {
-    // 経過時間を更新
-    m_elapsedTime += static_cast<float>(timer.GetElapsedSeconds());
-
     // プレイヤーの状態変化をチェックし、エフェクトをリセット
     ResetEffectsIfPlayerStatusChanged();
 

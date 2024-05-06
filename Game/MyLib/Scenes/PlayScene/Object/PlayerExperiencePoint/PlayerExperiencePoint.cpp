@@ -23,7 +23,8 @@ const int PlayerExperiencePoint::INCREASE_EXP	  = 12;
 /// </summary>
 /// <param name="player">ÉvÉåÉCÉÑÅ[</param>
 PlayerExperiencePoint::PlayerExperiencePoint(Player* player)
-	:m_player(player),
+	:
+	m_player(player),
 	m_experiencePoint(0),
 	m_needExperiencePoint(0),
 	m_surplusExperiencePoint(0)
@@ -57,7 +58,7 @@ void PlayerExperiencePoint::Update(const DX::StepTimer& timer)
 
 
 #ifdef _DEBUG
-		m_experiencePoint++; 
+		//	m_experiencePoint++; 
 #endif // _DEBUG
 
 

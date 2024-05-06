@@ -30,6 +30,8 @@ const int   NormalEnemy::FIRST_HEALTH							= 15;
 const int   NormalEnemy::NORMAL_EXP								= 3;
 //	死亡アニメーションの際に引く値
 const float NormalEnemy::SHADOW_ARGUMENT						= 0.02f;
+//	足の回る速さ
+const float NormalEnemy::LEG_TURN_SPEED							= 7.0f;
 //	当たり判定
 const Collision::Shape::Sphere	   NormalEnemy::SPERE_COLLISION		= Collision::Shape::Sphere(DirectX::SimpleMath::Vector3::Zero, 0.6f);
 //	球状の索敵範囲
@@ -127,15 +129,15 @@ void NormalEnemy::Update(const DX::StepTimer& timer)
 	}
 
 	//	発射時のアニメーション
-	m_shotAnimationScale = DirectX::SimpleMath::Vector3::Lerp(m_shotAnimationScale, DirectX::SimpleMath::Vector3(m_shotInterval / 2.8f, m_shotInterval / 2.8f, 0.0f), 0.1f);
+	m_shotAnimationScale	  = Vector3::Lerp(m_shotAnimationScale,		 Vector3(m_shotInterval / 2.8f, m_shotInterval / 2.8f, 0.0f), 0.1f);
 	//	発射時のアニメーション
-	m_shotAnimationAfterScale = DirectX::SimpleMath::Vector3::Lerp(m_shotAnimationAfterScale, DirectX::SimpleMath::Vector3(0.0f, -m_shotCoolTime / 3.6f, 0.0f), 0.1f);
+	m_shotAnimationAfterScale = Vector3::Lerp(m_shotAnimationAfterScale, Vector3(0.0f , -m_shotCoolTime / 3.6f, 0.0f), 0.1f);
 
 	// 基底クラスを設定する
 	Enemy::Update(timer);
 
 	//	足を回す
-	m_enemyLeg->RollLeg(timer, 7.0f);
+	m_enemyLeg->RollLeg(timer, LEG_TURN_SPEED);
 }
 
 /// <summary>
@@ -145,19 +147,21 @@ void NormalEnemy::Update(const DX::StepTimer& timer)
 /// <param name="proj">プロジェクション</param>
 void NormalEnemy::Render(const DirectX::SimpleMath::Matrix& view, const DirectX::SimpleMath::Matrix& proj)
 {
+	using namespace DirectX::SimpleMath;
+
 	auto screen = MyLib::ScreenResources::GetInstance();
 	//	足の描画
 	m_enemyLeg->Render(view, proj);
 	//	丸影を作る
 	CreateShadow(view, proj, m_shadowScale);
 	// スケール行列
-	DirectX::SimpleMath::Matrix scale = DirectX::SimpleMath::Matrix::CreateScale(GetScale() + m_shotAnimationScale + m_shotAnimationAfterScale);
+	Matrix scale  = Matrix::CreateScale(GetScale() + m_shotAnimationScale + m_shotAnimationAfterScale);
 	// 位置行列
-	DirectX::SimpleMath::Matrix trans = DirectX::SimpleMath::Matrix::CreateTranslation(GetPosition());
+	Matrix trans  = Matrix::CreateTranslation(GetPosition());
 	// 回転行列
-	DirectX::SimpleMath::Matrix rotate = DirectX::SimpleMath::Matrix::CreateFromQuaternion(GetRotate()); 
+	Matrix rotate = Matrix::CreateFromQuaternion(GetRotate()); 
 	// ワールド変換行列に変換（スケール、回転、位置の順で適用）
-	DirectX::SimpleMath::Matrix world = scale * rotate * trans;
+	Matrix world = scale * rotate * trans;
 	// 敵が無敵状態または死亡アニメーション中の場合、特殊な描画を行う
 	if (IsDeadAnimation())
 	{

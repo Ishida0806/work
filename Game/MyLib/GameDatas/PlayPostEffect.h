@@ -65,8 +65,6 @@ private:
     std::vector<PostEffect::PostEffectType> m_task; 
     // ポストエフェクト
     std::vector<std::unique_ptr<PostEffect>> m_effects; 
-    // 経過時間
-    float m_elapsedTime;
     // 体力UP時のエフェクト描画時間
     float m_healthUpEffectRenderTime;
      // 速度UP時のエフェクト描画時間

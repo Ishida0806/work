@@ -12,7 +12,8 @@
 /// コンストラクタ
 /// </summary>
 SkyDome::SkyDome(int stageNum)
-	:m_stageNum(stageNum),
+	:
+	m_stageNum(stageNum),
 	m_screens(nullptr),
 	m_texture(nullptr),
 	m_skyModel(nullptr)
@@ -102,7 +103,6 @@ void SkyDome::Render(const DirectX::SimpleMath::Matrix& view, const DirectX::Sim
 			}
 		}
 	);
-
 
     // スカイドームの描画
     m_skyModel->Draw(m_screens->GetDeviceContext(), *m_screens->GetCommonState(), DirectX::SimpleMath::Matrix::CreateScale(1.2f), view, proj);

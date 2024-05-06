@@ -23,6 +23,8 @@ public:
 	static const float										 SHOT_TIME;
 	//	—”ŠÔ
 	static const float										 RANDOM_TIME;
+	//	‘«‚Ì‰ñ‚é‘¬‚³
+	static const float										 LEG_TURN_SPEED;
 	//	‰Šúİ’è‚Ì—Í
 	static const int										 FIRST_POWER;
 	//	‰Šúİ’è‚Ì‘Ì—Í
