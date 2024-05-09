@@ -6,7 +6,6 @@
 #pragma once
 #include "Game/MyLib/Scenes/IScene.h"
 
-#include "Game/MyLib/Scenes/StageSelect/Sun.h"
 #include "Game/MyLib/Scenes/StageSelect/Bird.h"
 #include "Game/MyLib/Scenes/StageSelect/Enemy2D.h"
 #include "Game/MyLib/Scenes/StageSelect/Door2D.h"
@@ -82,8 +81,6 @@ private:
 	std::unique_ptr<StarManager>			    m_starManeger;
 	//	鳥
 	std::unique_ptr<Bird>						m_bird;
-	//	太陽
-	std::unique_ptr<Sun>						m_sun;
 	//	プレイヤーの2D
 	std::unique_ptr<Player2D>					m_player2D;
 	//	スクリーンリソース

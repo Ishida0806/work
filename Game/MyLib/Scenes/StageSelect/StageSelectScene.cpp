@@ -36,7 +36,8 @@ const float StageSelectScene::FIN_TIME										= 1.6f;
 /// </summary>
 /// <param name="game">ゲーム</param>
 StageSelectScene::StageSelectScene(Game* game)
-	:m_game(game),
+	:
+	m_game(game),
 	m_screen(nullptr),
 	m_resorces(nullptr),
 	m_escTexture(nullptr),
@@ -95,8 +96,6 @@ void StageSelectScene::Update(const DX::StepTimer& timer)
 	UpdatePlayer();
 	//	鳥の更新
 	m_bird->Update(timer, stageNum);
-	//	太陽の更新
-	m_sun->Update(timer, stageNum);
 	//	敵たちの更新
 	for (auto& enemy2d : m_enemies2D)			enemy2d->Update(timer);
 	//	ステージサークルの更新
@@ -128,9 +127,6 @@ void StageSelectScene::Render()
 
 	//	鳥の描画
 	m_bird->Draw();
-
-	//	太陽の描画
-	//m_sun->Draw();
 
 	//	敵の描画する
 	for (auto& enemy2d : m_enemies2D)	enemy2d->Draw();
@@ -210,7 +206,7 @@ void StageSelectScene::CreateDeviceDependentResources()
 			(
 				*(itr),
 				*(itr + 1),
-				half_screen + (DirectX::SimpleMath::Vector2(DISTANCE * static_cast<float>(num),-30.0f)),
+				half_screen + (DirectX::SimpleMath::Vector2(DISTANCE * static_cast<float>(num), -30.0f)),
 				DISTANCE
 			)
 		);
@@ -255,7 +251,7 @@ void StageSelectScene::CreateDeviceDependentResources()
 			std::make_unique<KeyFont>
 			(
 				nowType,
-				DirectX::SimpleMath::Vector2(350.0f + 580.0f * index, 420.0f)
+				DirectX::SimpleMath::Vector2(350.0f + 570.0f * index, 420.0f)
 			)
 		);
 		//	初期化処理
@@ -278,10 +274,6 @@ void StageSelectScene::CreateDeviceDependentResources()
 	m_bird = std::make_unique<Bird>();
 	//	初期化する
 	m_bird->Initialize();
-	//	太陽
-	m_sun = std::make_unique<Sun>();
-	//	初期化する
-	m_sun->Initialize();
 	//	ステージの背景
 	m_stageBackGround = std::make_unique<StageBackGround>(m_resorces->GatShaderResourceView(L"StageSelect_BackGround"), static_cast<int>(CHOOSE_STAGE::OverID));
 	//	初期化処理
@@ -329,8 +321,7 @@ void StageSelectScene::UpdateUIs(const DX::StepTimer& timer)
 	}
 
 	//	キーたちを更新する
-	for (const auto& key2D : m_keys2D)
-		key2D->Update(timer);
+	for (const auto& key2D : m_keys2D)	key2D->Update(timer);
 }
 
 /// <summary>
@@ -481,7 +472,7 @@ void StageSelectScene::CheckState()
 {
 	if (m_isMoveDirection == MOVE_DIRECTION::CENTER )	return;
 
-	if (m_preMove == true)							return;
+	if (m_preMove == true)								return;
 
 	int nowStageNum  = static_cast<int>(m_stageState);
 	int nextStageNum = static_cast<int>(m_stageState);
@@ -558,13 +549,6 @@ void StageSelectScene::RenderDoor()
 
 	for (size_t i = 0; i < m_doors2D.size(); i++)
 	{
-		if (i == stageState)
-		{
-			m_doors2D[i]->Draw(m_doorScale);
-		}
-		else
-		{
-			m_doors2D[i]->Draw(DirectX::SimpleMath::Vector2(BASE_SCALE, BASE_SCALE));
-		}
+		m_doors2D[i]->Draw(m_doorScale);
 	}
 }
