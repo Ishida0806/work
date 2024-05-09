@@ -7,6 +7,7 @@
 //	
 #include "pch.h"
 #include "PlayerStatus.h"
+#include "Game/MyLib/Scenes/PlayScene/Object/Player.h"
 
 //	プレイヤーの最初のレベル
 const int PlayerStatus::FIRST_LEVEL		  = 1;
@@ -29,7 +30,8 @@ const float PlayerStatus::POWER_UP_TIME	  = 15.0f;
 /// <param name="player">プレイヤー</param>
 /// <param name="health">体力</param>
 PlayerStatus::PlayerStatus(Player* player, const int& health)
-	:m_player(player),
+	:
+	m_player(player),
 	m_health(health),
 	m_maxHealth(health),
 	m_power(FIRST_POWER),
@@ -44,6 +46,7 @@ PlayerStatus::PlayerStatus(Player* player, const int& health)
 	m_isPowerUP(false),
 	m_isDamege(false),
 	m_powerUP(false),
+	m_swingSpeedUP(false),
 	m_isRecovery(false),
 	m_isInvincible(false)
 {
@@ -77,7 +80,7 @@ void PlayerStatus::Update(const DX::StepTimer& timer)
 	//	経験値状態を確認する
 	m_playerEP->Update(timer);
 	// レベルアップしたフラグを元に戻す
-	CheckLevelUP();
+	//CheckLevelUP();
 	// 時間経過で体力の回復を行う
 	Recovery(timer);
 	//	無敵になっていたら時間経過で戻す
@@ -109,24 +112,6 @@ void PlayerStatus::GetRecoveryItem()
 }
 
 
-/// <summary>
-/// レベルアップしたフラグを元に戻す
-/// </summary>
-void PlayerStatus::CheckLevelUP()
-{
-	if (m_powerUP)
-	{
-		m_powerUP = false;
-	}
-	if (m_speedUP)
-	{
-		m_speedUP = false;
-	}
-	if (m_healthUP)
-	{
-		m_healthUP = false;
-	}
-}
 
 /// <summary>
 /// パワーアップ状態の制限を確認する
@@ -248,6 +233,34 @@ void PlayerStatus::SetDamege(const int& damege)
 }
 
 /// <summary>
+/// セレクトした対象を増やした
+/// </summary>
+/// <param name="effectType">エフェクトタイプ</param>
+void PlayerStatus::SelectedUpStatus(const PostEffect::PostEffectType& effectType)
+{
+	// 力を設定済み
+	if (effectType == PostEffect::PostEffectType::PowerUP)
+	{
+		m_powerUP = false;
+	}
+	// 体力を設定済み
+	if (effectType == PostEffect::PostEffectType::HealthUP)
+	{
+		m_healthUP = false;
+	}
+	// 速度を設定済み
+	if (effectType == PostEffect::PostEffectType::SpeedUP)
+	{
+		m_speedUP = false;
+	}
+	// 振る速度を設定済み
+	if (effectType == PostEffect::PostEffectType::SwingSpeedUP)
+	{
+		m_swingSpeedUP = false;
+	}
+}
+
+/// <summary>
 /// 体力の最大値を増やす
 /// </summary>
 /// <param name="value">増加量</param>
@@ -276,6 +289,16 @@ void PlayerStatus::UpPower()
 	m_power++;
 	//	パワーが選ばれた
 	m_powerUP = true;
+}
+
+/// <summary>
+/// 剣の振る速度
+/// </summary>
+void PlayerStatus::UpSwingSpeed()
+{
+	m_player->GetSord()->UpSwingSpeed();
+	//	振る速度が選ばれた
+	m_swingSpeedUP = true;
 }
 
 /// <summary>

@@ -23,12 +23,14 @@ PlayPostEffect::PlayPostEffect(PlayerHPBar* playerHPBar, Player* player)
 	:m_playerHPBar(playerHPBar),
 	m_player(player),
 	m_elapsedTime(0.0f),
-	m_powerUPEffectRenderTime(0.0f),
-	m_speedUPEffectRenderTime(0.0f),
-	m_healthUPEffectRenderTime(0.0f),
-	m_speedUPEffectRenderFlag(false),
-	m_healthUPEffectRenderFlag(false),
-	m_powerUPEffectRenderFlag(false)
+    m_healthUpEffectRenderTime(0.0f),
+	m_swingSpeedEffectRenderTime(0.0f),
+	m_speedUpEffectRenderTime(0.0f),
+	m_powerUpEffectRenderTime(0.0f),
+	m_speedUpEffectIsActive(false),
+	m_healthUpEffectIsActive(false),
+	m_swingSpeedEffectIsActive(false),
+	m_powerUpEffectIsActive(false)
 {
 }
 
@@ -48,9 +50,10 @@ void PlayPostEffect::Initialize()
 	m_effects.push_back(std::make_unique<PlayerHPCrisisEffect>());
 	m_effects.push_back(std::make_unique<PlayerCureEffect>());
 	m_effects.push_back(std::make_unique<PlayerSpeedEffect>());
-	m_effects.push_back(std::make_unique<PlayerPowerffect>());
+	m_effects.push_back(std::make_unique<PlayerPowerEffect>());
+	m_effects.push_back(std::make_unique<PlayerSwingSpeedEffect>());
 
-	//
+	//  初期化
 	for (const auto& effect : m_effects)
 		effect->Initialize();
 }
@@ -61,109 +64,128 @@ void PlayPostEffect::Initialize()
 /// <param name="timer">タイマー</param>
 void PlayPostEffect::Update(const DX::StepTimer& timer)
 {
-	//	経過時間を足す
-	m_elapsedTime += static_cast<float>(timer.GetElapsedSeconds());
+    // 経過時間を更新
+    m_elapsedTime += static_cast<float>(timer.GetElapsedSeconds());
 
-	//	条件を確認したら前の奴は消す
-	if (m_playerHPBar->IsBad() ||
-		m_player->ChooseHealthUP() ||
-		m_player->ChooseSpeedUP() ||
-		m_player->ChoosePowerUP()
-		)
-	{
-		for (const auto& effect : m_effects)
-		{
-			//	ピンチエフェクトは例外
-			if (effect->GetEffectType() == PostEffect::PostEffectType::PlayerHPCrisis) continue;
+    // プレイヤーの状態変化をチェックし、エフェクトをリセット
+    ResetEffectsIfPlayerStatusChanged();
 
-			effect->ResetColorAndTime();
-		}
-	}
+    // プレイヤーのHP低下状態をチェックし、タスクに追加
+    CheckAndAddPlayerHPCrisisEffect();
 
-	//	条件を満たしたらタスクに入れる
-	if (m_playerHPBar->IsBad())
-	{
-		m_task.push_back(PostEffect::PostEffectType::PlayerHPCrisis);
-	}
-	else
-	{	
-		for (const auto& effect : m_effects)
-		{
-			//	ピンチエフェクト以外は帰れ
-			if (effect->GetEffectType() != PostEffect::PostEffectType::PlayerHPCrisis) continue;
-			//	BAD状態ではないので色をだんだん薄くする
-			effect->ResetLerpColor();
-		}
-	}
+    // プレイヤーのステータス上昇処理
+    HandlePlayerStatusUpgrade(timer);
 
-	if (m_player->ChooseHealthUP())
-	{
-		m_healthUPEffectRenderFlag = true;
-		m_healthUPEffectRenderTime = 0.0f;
-	}
-	if (m_player->ChooseSpeedUP())
-	{
-		m_speedUPEffectRenderFlag = true;
-		m_speedUPEffectRenderTime = 0.0f;
-	}
-	if (m_player->ChoosePowerUP())
-	{
-		m_powerUPEffectRenderFlag = true;
-		m_powerUPEffectRenderTime = 0.0f;
-	}
+    // タスクに登録されたエフェクトを更新
+    UpdateRegisteredEffects(timer);
 
-	//	体力が上がる条件を満たしたか
-	if (m_healthUPEffectRenderFlag)
-	{
-		m_task.push_back(PostEffect::PostEffectType::HealthUP);
+    // タスクをクリア
+    m_task.clear();
+}
 
-		m_healthUPEffectRenderTime += static_cast<float>(timer.GetElapsedSeconds());
+/// <summary>
+/// プレイヤーの状態変化をチェックし、エフェクトをリセット
+/// </summary>
+void PlayPostEffect::ResetEffectsIfPlayerStatusChanged()
+{
+    if (m_playerHPBar->IsBad() ||
+        m_player->ChooseHealthUP() ||
+        m_player->ChooseSpeedUP() ||
+        m_player->ChoosePowerUP() ||
+        m_player->ChooseSwingSpeedUP())
+    {
+        for (const auto& effect : m_effects)
+        {
+            // ピンチエフェクトは例外
+            if (effect->GetEffectType() == PostEffect::PostEffectType::PlayerHPCrisis) continue;
+            effect->ResetColorAndTime();
+        }
+    }
+}
 
-		if (m_healthUPEffectRenderTime > RENDER_EFFECT_TIME)
-		{
-			m_healthUPEffectRenderFlag = false;
-		}
-	}
-	//	速度が上がる条件を満たしたか
-	if (m_speedUPEffectRenderFlag)
-	{
-		m_task.push_back(PostEffect::PostEffectType::SpeedUP);
+/// <summary>
+/// プレイヤーのHP低下状態をチェックし、タスクに追加する
+/// </summary>
+void PlayPostEffect::CheckAndAddPlayerHPCrisisEffect()
+{
+    if (m_playerHPBar->IsBad())
+    {
+        m_task.push_back(PostEffect::PostEffectType::PlayerHPCrisis);
+    }
+    else
+    {
+        for (const auto& effect : m_effects)
+        {
+            // ピンチエフェクト以外は更新しない
+            if (effect->GetEffectType() != PostEffect::PostEffectType::PlayerHPCrisis) continue;
+            effect->ResetLerpColor();
+        }
+    }
+}
 
-		m_speedUPEffectRenderTime += static_cast<float>(timer.GetElapsedSeconds());
+/// <summary>
+/// プレイヤーのステータス上昇処理を行う
+/// </summary>
+/// <param name="timer">タイマー</param>
+void PlayPostEffect::HandlePlayerStatusUpgrade(const DX::StepTimer& timer)
+{
+    HandleStatusUpgrade(timer , m_player->ChooseHealthUP(),      m_healthUpEffectIsActive,   m_healthUpEffectRenderTime,    PostEffect::PostEffectType::HealthUP);
+    HandleStatusUpgrade(timer , m_player->ChooseSpeedUP(),       m_speedUpEffectIsActive,    m_speedUpEffectRenderTime,     PostEffect::PostEffectType::SpeedUP);
+    HandleStatusUpgrade(timer , m_player->ChooseSwingSpeedUP(),  m_swingSpeedEffectIsActive, m_swingSpeedEffectRenderTime,  PostEffect::PostEffectType::SwingSpeedUP);
+    HandleStatusUpgrade(timer , m_player->ChoosePowerUP(),       m_powerUpEffectIsActive,    m_powerUpEffectRenderTime,     PostEffect::PostEffectType::PowerUP);
+}
 
-		if (m_speedUPEffectRenderTime > RENDER_EFFECT_TIME)
-		{
-			m_speedUPEffectRenderFlag = false;
-		}
-	}
-	//	力が上がる条件を満たしたか
-	if (m_powerUPEffectRenderFlag)
-	{
-		m_task.push_back(PostEffect::PostEffectType::PowerUP);
+/// <summary>
+/// プレイヤーのステータス上昇処理を行う
+/// </summary>
+/// <param name="timer">タイマー</param>
+/// <param name="isEffectActive">エフェクトが有効かどうか</param>
+/// <param name="effectRenderTime">エフェクトの描画時間</param>
+/// <param name="effectType">エフェクトのタイプ</param>
+void PlayPostEffect::HandleStatusUpgrade(const DX::StepTimer& timer, bool isUpgraded, bool& isEffectActive, float& effectRenderTime, PostEffect::PostEffectType effectType)
+{
+    if (isUpgraded)
+    {
+        m_player->SelectedUpStatus(effectType);
+        isEffectActive = true;
+        effectRenderTime = 0.0f;
+        m_task.push_back(effectType);
+    }
 
-		m_powerUPEffectRenderTime += static_cast<float>(timer.GetElapsedSeconds());
+    if (isEffectActive)
+    {
+        effectRenderTime += static_cast<float>(timer.GetElapsedSeconds());
 
-		if (m_powerUPEffectRenderTime > RENDER_EFFECT_TIME)
-		{
-			m_powerUPEffectRenderFlag = false;
-		}
-	}
+        //  経過時間を越していたらフラグを折り、早期リターン
+        if (effectRenderTime > RENDER_EFFECT_TIME)
+        {
+            isEffectActive = false;
 
-	if (m_task.size() != 0)
-	{
-		for (const auto& task : m_task)
-		{
-			for (const auto& effect : m_effects)
-			{
-				if (task != effect->GetEffectType()) continue;
-				
-				effect->Update(timer);
-				
-			}
-		}
-	}		
-	//	クリアを行う
-	m_task.clear();
+            return;
+        }
+        //  ここまで来れたらまだ表示時間
+        m_task.push_back(effectType);
+    }
+}
+
+/// <summary>
+/// 登録されたエフェクトを更新する
+/// </summary>
+/// <param name="timer">タイマー</param>
+void PlayPostEffect::UpdateRegisteredEffects(const DX::StepTimer& timer)
+{
+    if (!m_task.empty())
+    {
+        for (const auto& task : m_task)
+        {
+            for (const auto& effect : m_effects)
+            {
+                if (task != effect->GetEffectType()) continue;
+                
+                effect->Update(timer);
+            }
+        }
+    }
 }
 
 /// <summary>

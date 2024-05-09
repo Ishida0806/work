@@ -153,9 +153,6 @@ void ItemManager::SpawnItem(const DX::StepTimer& timer)
 		//	スポーン時間はリセットする
 		m_spwanItemTime = 0.0f;
 
-		//	乱数の初期化
-		srand((unsigned int)time(NULL));
-
 		//	0～6の値をランダムで取得する
 		int random = rand() % 6;
 

@@ -59,6 +59,9 @@ void Game::Initialize(HWND window, int width, int height)
 
     //  マウスカーソルを消す
     ShowMouseCursor(TRUE);
+
+    //  ランダムの初期化
+    srand((unsigned int)time(NULL));
 }
 
 #pragma region Frame Update
@@ -322,9 +325,9 @@ void Game::CreateProjection()
 /// </summary>
 void Game::CreateScene()
 {
-   m_sceneManager->ChangeScene<TitleScene>(this);
+   //_sceneManager->ChangeScene<TitleScene>(this);
    //m_sceneManager->ChangeScene<StageSelectScene>(this);
-   //m_sceneManager->ChangeScene<PlayScene>(this, m_screens);
+   m_sceneManager->ChangeScene<PlayScene>(this, m_screens);
    //m_sceneManager->ChangeScene<ResultScene>(this);
 }
 
@@ -448,6 +451,7 @@ void Game::AddTexture()
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"PowerUPCard");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"HealthUPCard");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"SpeedUPCard");
+    MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"SwingSpeedUPCard");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"leverUpCardBackGround");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"EXPmax");
     MyLib::ResourcesData::GetInstance()->AddShaderResourceView(L"ColourlessBoard");

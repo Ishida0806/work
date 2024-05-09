@@ -15,6 +15,8 @@ const float Sord::OFFSET_ANGLE			= 120.0f;
 const float Sord::SWING_ANGLE			= 150.0f;
 //	振る速度
 const float Sord::SWING_SPEED			= 0.34f;
+//	レベルアップ時の上がる速度
+const float Sord::SWING_SPEED_UP_VALUE  = 0.12f;
 //	球の半径
 const float Sord::SPHERE_RADIUS			= 0.1f;
 //	ラープの時間
@@ -42,6 +44,7 @@ const DirectX::SimpleMath::Vector3 Sord::SORD_ROLL_DIRECTION	= DirectX::SimpleMa
 //	剣の落ちる速度
 const DirectX::SimpleMath::Vector3 Sord::SORD_FALL_SPEED		= DirectX::SimpleMath::Vector3(0.0f, -0.011f, 0.0f);
 
+
 /// <summary>
 /// コンストラクタ
 /// </summary>
@@ -51,6 +54,7 @@ Sord::Sord(Player* parent)
 	m_sordModel(nullptr),
 	m_attackTime(SWING_COOLTIME),
 	m_slashAngle(0.0f),
+	m_shortAttackTime(0.0f),
 	m_objective(0.0f),
 	m_attackCoolTime(0.0f),
 	m_isAttack(false),
@@ -215,7 +219,7 @@ void Sord::Attack(const DX::StepTimer& timer)
 	if (m_attackTime < 0.0f)
 	{
 		m_attackTime	   = SWING_COOLTIME;
-		m_attackCoolTime   = ATTACK_COOL_TIME;
+		m_attackCoolTime   = ATTACK_COOL_TIME + m_shortAttackTime;
 		m_slashAngle	   = 0.0f;
 		m_objective		   = 0.0f;
 		m_secondAttack	   = false;
@@ -320,4 +324,12 @@ bool Sord::ShouldSwingSecondFlag()
 	}
 
 	return false;
+}
+
+/// <summary>
+/// 振る速度の上がる
+/// </summary>
+void Sord::UpSwingSpeed()
+{
+	m_shortAttackTime -= SWING_SPEED_UP_VALUE;
 }

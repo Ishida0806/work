@@ -1,12 +1,12 @@
 //
-//		File Name ： PlayerPowerffect.h
+//		File Name ： PlayerSwingSpeedEffect.h
 //		Production： 2023/1/15
 //		Author　　： 石田 恭一	
 //
 #pragma once
 #include "PostEffect.h"
 
-class PlayerPowerEffect : public PostEffect
+class PlayerSwingSpeedEffect : public PostEffect
 {
 	//	定数
 public:
@@ -28,12 +28,12 @@ public:
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
-	PlayerPowerEffect();
+	PlayerSwingSpeedEffect();
 
 	/// <summary>
 	/// デストラクタ
 	/// </summary>
-	~PlayerPowerEffect() override;
+	~PlayerSwingSpeedEffect() override;
 
 	/// <summary>
 	///	初期化処理
