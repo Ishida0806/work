@@ -76,7 +76,7 @@ bool LevelCard::Update(const DX::StepTimer& timer)
     int playerMaxLevel = m_player->GetPlayerEXPoint()->MAX_PLAYER_LEVEL;
 
     //	プレイヤーのレベルの最大値を超えていたら帰れ
-    if (m_playerLevel >= playerMaxLevel)    return false;
+    if (m_playerLevel >= playerMaxLevel)                return false;
 
     //	プレイヤーのレベルが上がったか？
     if (m_player->GetPlayerLevel() == m_playerLevel)    return false;

@@ -160,14 +160,14 @@ void NormalEnemy::Render(const DirectX::SimpleMath::Matrix& view, const DirectX:
 	Matrix trans  = Matrix::CreateTranslation(GetPosition());
 	// 回転行列
 	Matrix rotate = Matrix::CreateFromQuaternion(GetRotate()); 
-	// ワールド変換行列に変換（スケール、回転、位置の順で適用）
-	Matrix world = scale * rotate * trans;
+	// ワールド変換行列に変換
+	Matrix world  = scale * rotate * trans;
 	// 敵が無敵状態または死亡アニメーション中の場合、特殊な描画を行う
 	if (IsDeadAnimation())
 	{
 		m_enemyModel->Draw(screen->GetDeviceContext(), *screen->GetCommonState(), world, view, proj, true);
 	}
-	else // 通常の描画を行います
+	else 
 	{
 		m_enemyModel->Draw(screen->GetDeviceContext(), *screen->GetCommonState(), world, view, proj);
 	}
